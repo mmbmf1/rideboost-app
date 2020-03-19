@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import RideBoostContext from "../../contexts/RideBoostContext";
 import Header from "../Header/Header";
 import LandingPage from "../LandingPage/LandingPage";
+import LoginPage from "../../routes/LoginPage/LoginPage";
 import SignupPage from "../../routes/SingupPage/SignupPage";
 import DemoPage from "../../routes/DemoPage/DemoPage";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
@@ -27,6 +28,7 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path={"/"} component={LandingPage} />
           <Route exact path={"/signup"} component={SignupPage} />
+          <Route exact path={"/login"} component={LoginPage} />
           <Route exact path={"/demopage"} component={DemoPage} />
           <Route component={NotFoundPage} />
         </Switch>
