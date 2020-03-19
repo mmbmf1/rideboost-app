@@ -1,7 +1,8 @@
 import React from "react";
+import LandingPage from "../LandingPage/LandingPage";
 
-function App() {
-  return <main className="App">Hello RideBoost</main>;
+export default class App extends React.Component {
+  render() {
+    return <LandingPage />;
+  }
 }
-
-export default App;
