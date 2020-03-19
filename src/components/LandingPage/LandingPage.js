@@ -12,7 +12,7 @@ export default class LandingPage extends React.Component {
           <section className="main-section">
             <h1>{content.hero}</h1>
             <p>{content.heroContent}</p>
-            <button>Explore</button>
+            {/* <button>Explore</button> */}
           </section>
           <section className="main-section">
             <h1>{content.sectionOneTitle}</h1>
