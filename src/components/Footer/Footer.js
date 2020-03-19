@@ -1,17 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
     <footer>
-      <Link to="https://github.com/mmbmf1">
+      <a
+        href="https://github.com/mmbmf1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faGithub} />
-      </Link>
-      <Link to="https://www.linkedin.com/in/michael-mace-kc/">
+      </a>
+      <a
+        href="https://www.linkedin.com/in/michael-mace-kc/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faLinkedin} />
-      </Link>
+      </a>
     </footer>
   );
 }
