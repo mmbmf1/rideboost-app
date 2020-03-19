@@ -1,8 +1,11 @@
 import React from "react";
+import RideBoostContext from "../../contexts/RideBoostContext";
 
 export default class LandingPage extends React.Component {
+  static contextType = RideBoostContext;
+
   render() {
-    const content = this.props.content;
+    const content = this.context;
     return (
       <main role="main" className="landing-page">
         <div className="main-wrapper">

@@ -76,6 +76,12 @@
     margin-right: auto;
   }
 
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
   footer {
     padding: 10px;
     text-align: center;
