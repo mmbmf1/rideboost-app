@@ -4,6 +4,7 @@ import RideBoostContext from "../../contexts/RideBoostContext";
 import Header from "../Header/Header";
 import LandingPage from "../LandingPage/LandingPage";
 import SignupPage from "../../routes/SingupPage/SignupPage";
+import DemoPage from "../../routes/DemoPage/DemoPage";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import Footer from "../Footer/Footer";
 import Content from "../../content";
@@ -26,6 +27,7 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path={"/"} component={LandingPage} />
           <Route exact path={"/signup"} component={SignupPage} />
+          <Route exact path={"/demopage"} component={DemoPage} />
           <Route component={NotFoundPage} />
         </Switch>
         <Footer content={content} />
