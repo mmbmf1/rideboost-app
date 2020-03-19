@@ -6,10 +6,10 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <footer>
-      <Link to="">
+      <Link to="https://github.com/mmbmf1">
         <FontAwesomeIcon icon={faGithub} />
       </Link>
-      <Link to="">
+      <Link to="https://www.linkedin.com/in/michael-mace-kc/">
         <FontAwesomeIcon icon={faLinkedin} />
       </Link>
     </footer>
