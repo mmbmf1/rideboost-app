@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css?family=Baloo|Baloo+Chettan+2|Montserrat&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media screen and (min-width: 300px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 5px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: unset;
+  }
+
+  nav {
+    margin-bottom: 10px;
+    background-color: lightgray;
+    display: flex;
+  }
+
+  #nav-left,
+  #nav-right {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    font-size: 0.8em;
+    font-family: "Baloo", cursive;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+
+  #nav-left {
+    padding-left: 10px;
+  }
+
+  #nav-right {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: "Baloo", cursive;
+  }
+
+  .main-section:nth-child(odd) {
+    margin-bottom: 10px;
+    background-color: #ddd;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #aaa;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: lightgrey;
+  }
+
+  footer a {
+    margin-right: 5px;
+  }
 }
