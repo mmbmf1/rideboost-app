@@ -1,12 +1,20 @@
 import React from "react";
 
-function Airline() {
-  return (
-    <div>
-      <h1>Airport Arrivals</h1>
-      <h1>Airport Departures</h1>
-    </div>
-  );
-}
+export default class Airline extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      arrivals: "",
+      departures: ""
+    };
+  }
 
-export default Airline;
+  render() {
+    return (
+      <div>
+        <p>Airport Arrivals</p>
+        <p>Airport Departures</p>
+      </div>
+    );
+  }
+}
