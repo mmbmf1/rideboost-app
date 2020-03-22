@@ -22,6 +22,11 @@
     color: unset;
   }
 
+  ul {
+    list-style: none;
+    /* display: flex; */
+  }
+
   nav {
     margin-bottom: 10px;
     background-color: lightgray;
