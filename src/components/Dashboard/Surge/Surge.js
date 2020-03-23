@@ -1,11 +1,11 @@
 import React from "react";
 
-function Alerts() {
+function Surge() {
   return (
     <div>
-      <p>Surge Alerts</p>
+      <p>Surge Levels</p>
     </div>
   );
 }
 
-export default Alerts;
+export default Surge;

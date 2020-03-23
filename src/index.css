@@ -24,7 +24,6 @@
 
   ul {
     list-style: none;
-    /* display: flex; */
   }
 
   nav {
@@ -48,6 +47,10 @@
 
   #nav-left {
     padding-left: 10px;
+  }
+
+  svg {
+    margin-right: 10px;
   }
 
   #nav-right {
@@ -85,6 +88,64 @@
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+  }
+
+  .weather-container,
+  .airline-container,
+  .events-container {
+    margin: 0 30px;
+  }
+
+  .weather-container {
+    text-align: center;
+  }
+
+  .weather-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  li img {
+    width: 50px;
+  }
+
+  li p {
+    font-size: 0.5em;
+  }
+
+  table {
+    font-size: 0.5em;
+  }
+
+  .event {
+    clear: left;
+    margin-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .event-img {
+    float: left;
+    margin-right: 10px;
+    padding: 10px 0 10px 0;
+  }
+
+  .event-img img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .stock-img {
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin: 10px 10px 10px 0;
+    background-color: blue;
+  }
+
+  .event-info {
+    padding: 10px 0 20px 0;
+    font-size: 0.5em;
   }
 
   footer {

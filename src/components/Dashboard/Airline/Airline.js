@@ -15,7 +15,7 @@ export default class Airline extends React.Component {
     const departures = this.props.departures.data;
     // console.log(departures);
     return (
-      <div>
+      <div className="airline-container">
         <h3>Airport Arrivals</h3>
         <table>
           <thead>

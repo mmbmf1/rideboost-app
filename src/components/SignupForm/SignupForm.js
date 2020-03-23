@@ -13,7 +13,7 @@ function SignupForm() {
       <input type="email" name="email" />
       <label htmlFor="phone">Phone Number:</label>
       <input type="tel" name="phone" />
-      <label htmlFor="location">Location:</label>
+      <label htmlFor="location">ZIP Code:</label>
       <input type="text" name="location" />
       <input type="submit" value="Create Account" />
     </form>
