@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css?family=Baloo|Baloo+Chettan+2|Montserrat&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (min-width: 300px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 5px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: unset;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  nav {
+    margin-bottom: 10px;
+    background-color: lightgray;
+    display: flex;
+  }
+
+  #nav-left,
+  #nav-right {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    font-size: 0.8em;
+    font-family: "Baloo", cursive;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+
+  #nav-left {
+    padding-left: 10px;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  #nav-right {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: "Baloo", cursive;
+  }
+
+  .main-section:nth-child(odd) {
+    margin-bottom: 10px;
+    background-color: #ddd;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #aaa;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .weather-container,
+  .airline-container,
+  .events-container {
+    margin: 0 30px;
+  }
+
+  .weather-container {
+    text-align: center;
+  }
+
+  .weather-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  li img {
+    width: 50px;
+  }
+
+  li p {
+    font-size: 0.5em;
+  }
+
+  .dashboard-header {
+    display: flex;
+    align-items: baseline;
+    /* justify-content: space-between; */
+  }
+
+  .dashboard-header h3 {
+    margin-right: 10px;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 0.5em;
+  }
+
+  th,
+  td {
+    text-align: left;
+  }
+
+  td {
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .event {
+    clear: left;
+    margin-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .event-img {
+    float: left;
+    margin-right: 10px;
+    padding: 10px 0 10px 0;
+  }
+
+  .event-img img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .stock-img {
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin: 10px 10px 10px 0;
+    background-color: blue;
+  }
+
+  .event-info {
+    padding: 10px 0 20px 0;
+    font-size: 0.5em;
+  }
+
+  footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: lightgrey;
+  }
+
+  footer a {
+    margin-right: 5px;
+  }
 }
