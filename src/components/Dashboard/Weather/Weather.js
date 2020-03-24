@@ -1,7 +1,7 @@
 import React from "react";
 import { convertTemp, convertDate } from "../../../app-helpers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloud, faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
+import { faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
 
 export default class Weather extends React.Component {
   render() {
