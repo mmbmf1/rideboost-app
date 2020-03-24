@@ -10,7 +10,7 @@ export default class Weather extends React.Component {
         <ul>
           <li>
             <img
-              src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
               alt="current weather"
               className="weather-icon"
             />
@@ -22,7 +22,7 @@ export default class Weather extends React.Component {
           </li>
           <li>
             <img
-              src={`http://openweathermap.org/img/wn/${forecastWeather.list[0].weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${forecastWeather.list[0].weather[0].icon}@2x.png`}
               alt="forecast weather"
               className="weather-icon"
             />
@@ -36,7 +36,7 @@ export default class Weather extends React.Component {
           </li>
           <li>
             <img
-              src={`http://openweathermap.org/img/wn/${forecastWeather.list[1].weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${forecastWeather.list[1].weather[0].icon}@2x.png`}
               alt="forecast weather"
               className="weather-icon"
             />
@@ -50,7 +50,7 @@ export default class Weather extends React.Component {
           </li>
           <li>
             <img
-              src={`http://openweathermap.org/img/wn/${forecastWeather.list[2].weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${forecastWeather.list[2].weather[0].icon}@2x.png`}
               alt="forecast weather"
               className="weather-icon"
             />
