@@ -1,12 +1,20 @@
 import React from "react";
+import { convertTemp, convertDate } from "../../../app-helpers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCloud, faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
 
 export default class Weather extends React.Component {
   render() {
     const currentWeather = this.props.currentWeather;
     const forecastWeather = this.props.forecastWeather;
     //convert Math.round & new dates into functions
+    // console.log(convertTemp(currentWeather.main.temp));
     return (
       <div className="weather-container">
+        <div className="dashboard-header">
+          <FontAwesomeIcon icon={faCloudSunRain} />
+          <h3>Weather</h3>
+        </div>
         <ul>
           <li>
             <img
@@ -15,7 +23,7 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>
-              {Math.round(currentWeather.main.temp * (9 / 5) - 459.67)}
+              {convertTemp(currentWeather.main.temp)}
               {"\xB0"}F
             </p>
             <p>{currentWeather.name}</p>
@@ -27,12 +35,10 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>
-              {Math.round(forecastWeather.list[0].main.temp * (9 / 5) - 459.67)}
+              {convertTemp(forecastWeather.list[0].main.temp)}
               {"\xB0"}F
             </p>
-            <p>
-              {new Date(forecastWeather.list[0].dt_txt).toLocaleTimeString()}
-            </p>
+            <p>{convertDate(forecastWeather.list[0].dt_txt)}</p>
           </li>
           <li>
             <img
@@ -41,12 +47,10 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>
-              {Math.round(forecastWeather.list[1].main.temp * (9 / 5) - 459.67)}
+              {convertTemp(forecastWeather.list[1].main.temp)}
               {"\xB0"}F
             </p>
-            <p>
-              {new Date(forecastWeather.list[1].dt_txt).toLocaleTimeString()}
-            </p>
+            <p>{convertDate(forecastWeather.list[1].dt_txt)}</p>
           </li>
           <li>
             <img
@@ -55,12 +59,10 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>
-              {Math.round(forecastWeather.list[2].main.temp * (9 / 5) - 459.67)}
+              {convertTemp(forecastWeather.list[2].main.temp)}
               {"\xB0"}F
             </p>
-            <p>
-              {new Date(forecastWeather.list[2].dt_txt).toLocaleTimeString()}
-            </p>
+            <p>{convertDate(forecastWeather.list[2].dt_txt)}</p>
           </li>
         </ul>
       </div>

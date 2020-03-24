@@ -114,8 +114,28 @@
     font-size: 0.5em;
   }
 
+  .dashboard-header {
+    display: flex;
+    align-items: baseline;
+    /* justify-content: space-between; */
+  }
+
+  .dashboard-header h3 {
+    margin-right: 10px;
+  }
+
   table {
     font-size: 0.5em;
+  }
+
+  th,
+  td {
+    text-align: left;
+  }
+
+  td {
+    padding-right: 10px;
+    white-space: nowrap;
   }
 
   .event {

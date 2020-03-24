@@ -1,4 +1,10 @@
 import React from "react";
+import { convertDate } from "../../../app-helpers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPlaneArrival,
+  faPlaneDeparture
+} from "@fortawesome/free-solid-svg-icons";
 
 export default class Airline extends React.Component {
   //Move arrivals departures into components?
@@ -9,7 +15,10 @@ export default class Airline extends React.Component {
     const departures = this.props.departures;
     return (
       <div className="airline-container">
-        <h3>MCI Arrivals</h3>
+        <div className="dashboard-header">
+          <FontAwesomeIcon icon={faPlaneArrival} />
+          <h3>MCI</h3>
+        </div>
         <table>
           <thead>
             <tr>
@@ -27,14 +36,15 @@ export default class Airline extends React.Component {
                 <td>{a.number}</td>
                 <td>{a.movement.airport.name}</td>
                 <td>{a.status}</td>
-                <td>
-                  {new Date(a.movement.scheduledTimeUtc).toLocaleTimeString()}
-                </td>
+                <td>{convertDate(a.movement.scheduledTimeUtc)}</td>
               </tr>
             </tbody>
           ))}
         </table>
-        <h3>MCI Departures</h3>
+        <div className="dashboard-header">
+          <FontAwesomeIcon icon={faPlaneDeparture} />
+          <h3>MCI</h3>
+        </div>
         <table>
           <thead>
             <tr>
@@ -52,9 +62,7 @@ export default class Airline extends React.Component {
                 <td>{d.number}</td>
                 <td>{d.movement.airport.name}</td>
                 <td>{d.status}</td>
-                <td>
-                  {new Date(d.movement.scheduledTimeUtc).toLocaleTimeString()}
-                </td>
+                <td>{convertDate(d.movement.scheduledTimeUtc)}</td>
               </tr>
             </tbody>
           ))}

@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default class Events extends React.Component {
   //Find event stock image
@@ -6,7 +8,10 @@ export default class Events extends React.Component {
     const events = this.props.events.event;
     return (
       <div className="events-container">
-        <h3>Upcoming Events</h3>
+        <div className="dashboard-header">
+          <FontAwesomeIcon icon={faCalendarAlt} />
+          <h3>Upcoming Events</h3>
+        </div>
         {events.map((e, index) => (
           <div key={index} className="event">
             {e.image ? (
