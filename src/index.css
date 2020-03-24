@@ -125,6 +125,8 @@
   }
 
   table {
+    table-layout: fixed;
+    width: 100%;
     font-size: 0.5em;
   }
 
