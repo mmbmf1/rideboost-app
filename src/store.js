@@ -328,6 +328,1430 @@ const store = {
     ]
   },
 
+  //may need to make 2 API calls for weather: currentWeather (displays current), forecastWeather(displays 3 hr intervals)
+
+  currentWeather: {
+    coord: {
+      lon: -94.58,
+      lat: 38.97
+    },
+    weather: [
+      {
+        id: 501,
+        main: "Rain",
+        description: "moderate rain",
+        icon: "10d"
+      },
+      {
+        id: 701,
+        main: "Mist",
+        description: "mist",
+        icon: "50d"
+      }
+    ],
+    base: "stations",
+    main: {
+      temp: 279.51,
+      feels_like: 275.58,
+      temp_min: 278.71,
+      temp_max: 280.37,
+      pressure: 1013,
+      humidity: 93
+    },
+    visibility: 8047,
+    wind: {
+      speed: 4.1,
+      deg: 110
+    },
+    rain: {
+      "1h": 1.27
+    },
+    clouds: {
+      all: 90
+    },
+    dt: 1585056961,
+    sys: {
+      type: 1,
+      id: 4794,
+      country: "US",
+      sunrise: 1585052073,
+      sunset: 1585096447
+    },
+    timezone: -18000,
+    id: 0,
+    name: "Kansas City",
+    cod: 200
+  },
+
+  forecastWeather: {
+    cod: "200",
+    message: 0,
+    cnt: 40,
+    list: [
+      {
+        dt: 1585062000,
+        main: {
+          temp: 281.46,
+          feels_like: 277.95,
+          temp_min: 281.46,
+          temp_max: 283.04,
+          pressure: 1014,
+          sea_level: 1014,
+          grnd_level: 980,
+          humidity: 86,
+          temp_kf: -1.58
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.74,
+          deg: 110
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-24 15:00:00"
+      },
+      {
+        dt: 1585072800,
+        main: {
+          temp: 282.91,
+          feels_like: 279.53,
+          temp_min: 282.91,
+          temp_max: 284.1,
+          pressure: 1014,
+          sea_level: 1014,
+          grnd_level: 980,
+          humidity: 80,
+          temp_kf: -1.19
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.67,
+          deg: 60
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-24 18:00:00"
+      },
+      {
+        dt: 1585083600,
+        main: {
+          temp: 284.91,
+          feels_like: 281.81,
+          temp_min: 284.91,
+          temp_max: 285.7,
+          pressure: 1013,
+          sea_level: 1013,
+          grnd_level: 979,
+          humidity: 75,
+          temp_kf: -0.79
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 85
+        },
+        wind: {
+          speed: 3.58,
+          deg: 85
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-24 21:00:00"
+      },
+      {
+        dt: 1585094400,
+        main: {
+          temp: 284.78,
+          feels_like: 283.09,
+          temp_min: 284.78,
+          temp_max: 285.18,
+          pressure: 1012,
+          sea_level: 1012,
+          grnd_level: 978,
+          humidity: 80,
+          temp_kf: -0.4
+        },
+        weather: [
+          {
+            id: 802,
+            main: "Clouds",
+            description: "scattered clouds",
+            icon: "03d"
+          }
+        ],
+        clouds: {
+          all: 49
+        },
+        wind: {
+          speed: 1.85,
+          deg: 98
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-25 00:00:00"
+      },
+      {
+        dt: 1585105200,
+        main: {
+          temp: 283.78,
+          feels_like: 282.74,
+          temp_min: 283.78,
+          temp_max: 283.78,
+          pressure: 1014,
+          sea_level: 1014,
+          grnd_level: 981,
+          humidity: 87,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 803,
+            main: "Clouds",
+            description: "broken clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 81
+        },
+        wind: {
+          speed: 1.01,
+          deg: 124
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-25 03:00:00"
+      },
+      {
+        dt: 1585116000,
+        main: {
+          temp: 282.4,
+          feels_like: 280.07,
+          temp_min: 282.4,
+          temp_max: 282.4,
+          pressure: 1013,
+          sea_level: 1013,
+          grnd_level: 979,
+          humidity: 91,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 803,
+            main: "Clouds",
+            description: "broken clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 71
+        },
+        wind: {
+          speed: 2.62,
+          deg: 148
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-25 06:00:00"
+      },
+      {
+        dt: 1585126800,
+        main: {
+          temp: 281.1,
+          feels_like: 278.61,
+          temp_min: 281.1,
+          temp_max: 281.1,
+          pressure: 1012,
+          sea_level: 1012,
+          grnd_level: 979,
+          humidity: 95,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 800,
+            main: "Clear",
+            description: "clear sky",
+            icon: "01n"
+          }
+        ],
+        clouds: {
+          all: 0
+        },
+        wind: {
+          speed: 2.62,
+          deg: 167
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-25 09:00:00"
+      },
+      {
+        dt: 1585137600,
+        main: {
+          temp: 280.8,
+          feels_like: 277.69,
+          temp_min: 280.8,
+          temp_max: 280.8,
+          pressure: 1012,
+          sea_level: 1012,
+          grnd_level: 978,
+          humidity: 95,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 801,
+            main: "Clouds",
+            description: "few clouds",
+            icon: "02n"
+          }
+        ],
+        clouds: {
+          all: 17
+        },
+        wind: {
+          speed: 3.42,
+          deg: 177
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-25 12:00:00"
+      },
+      {
+        dt: 1585148400,
+        main: {
+          temp: 285.2,
+          feels_like: 282.18,
+          temp_min: 285.2,
+          temp_max: 285.2,
+          pressure: 1012,
+          sea_level: 1012,
+          grnd_level: 978,
+          humidity: 82,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 4.03,
+          deg: 177
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-25 15:00:00"
+      },
+      {
+        dt: 1585159200,
+        main: {
+          temp: 291.33,
+          feels_like: 287.74,
+          temp_min: 291.33,
+          temp_max: 291.33,
+          pressure: 1010,
+          sea_level: 1010,
+          grnd_level: 976,
+          humidity: 61,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 85
+        },
+        wind: {
+          speed: 5.4,
+          deg: 185
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-25 18:00:00"
+      },
+      {
+        dt: 1585170000,
+        main: {
+          temp: 294.01,
+          feels_like: 289.85,
+          temp_min: 294.01,
+          temp_max: 294.01,
+          pressure: 1006,
+          sea_level: 1006,
+          grnd_level: 973,
+          humidity: 50,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 88
+        },
+        wind: {
+          speed: 6.02,
+          deg: 203
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-25 21:00:00"
+      },
+      {
+        dt: 1585180800,
+        main: {
+          temp: 291.39,
+          feels_like: 289.5,
+          temp_min: 291.39,
+          temp_max: 291.39,
+          pressure: 1005,
+          sea_level: 1005,
+          grnd_level: 973,
+          humidity: 70,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 94
+        },
+        wind: {
+          speed: 3.89,
+          deg: 203
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-26 00:00:00"
+      },
+      {
+        dt: 1585191600,
+        main: {
+          temp: 288.74,
+          feels_like: 287.33,
+          temp_min: 288.74,
+          temp_max: 288.74,
+          pressure: 1007,
+          sea_level: 1007,
+          grnd_level: 974,
+          humidity: 85,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.38,
+          deg: 209
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-26 03:00:00"
+      },
+      {
+        dt: 1585202400,
+        main: {
+          temp: 286.5,
+          feels_like: 284.53,
+          temp_min: 286.5,
+          temp_max: 286.5,
+          pressure: 1008,
+          sea_level: 1008,
+          grnd_level: 975,
+          humidity: 90,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 98
+        },
+        wind: {
+          speed: 3.59,
+          deg: 3
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-26 06:00:00"
+      },
+      {
+        dt: 1585213200,
+        main: {
+          temp: 282.78,
+          feels_like: 279.31,
+          temp_min: 282.78,
+          temp_max: 282.78,
+          pressure: 1008,
+          sea_level: 1008,
+          grnd_level: 975,
+          humidity: 93,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 801,
+            main: "Clouds",
+            description: "few clouds",
+            icon: "02n"
+          }
+        ],
+        clouds: {
+          all: 20
+        },
+        wind: {
+          speed: 4.49,
+          deg: 39
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-26 09:00:00"
+      },
+      {
+        dt: 1585224000,
+        main: {
+          temp: 281.88,
+          feels_like: 277.64,
+          temp_min: 281.88,
+          temp_max: 281.88,
+          pressure: 1008,
+          sea_level: 1008,
+          grnd_level: 975,
+          humidity: 90,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 803,
+            main: "Clouds",
+            description: "broken clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 60
+        },
+        wind: {
+          speed: 5.12,
+          deg: 65
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-26 12:00:00"
+      },
+      {
+        dt: 1585234800,
+        main: {
+          temp: 284.12,
+          feels_like: 280.8,
+          temp_min: 284.12,
+          temp_max: 284.12,
+          pressure: 1007,
+          sea_level: 1007,
+          grnd_level: 974,
+          humidity: 92,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 4.7,
+          deg: 75
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-26 15:00:00"
+      },
+      {
+        dt: 1585245600,
+        main: {
+          temp: 285.8,
+          feels_like: 283.69,
+          temp_min: 285.8,
+          temp_max: 285.8,
+          pressure: 1006,
+          sea_level: 1006,
+          grnd_level: 973,
+          humidity: 89,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.43,
+          deg: 62
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-26 18:00:00"
+      },
+      {
+        dt: 1585256400,
+        main: {
+          temp: 289.13,
+          feels_like: 288.23,
+          temp_min: 289.13,
+          temp_max: 289.13,
+          pressure: 1004,
+          sea_level: 1004,
+          grnd_level: 971,
+          humidity: 80,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 2.41,
+          deg: 10
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-26 21:00:00"
+      },
+      {
+        dt: 1585267200,
+        main: {
+          temp: 287.27,
+          feels_like: 285.64,
+          temp_min: 287.27,
+          temp_max: 287.27,
+          pressure: 1005,
+          sea_level: 1005,
+          grnd_level: 972,
+          humidity: 86,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 93
+        },
+        wind: {
+          speed: 3.14,
+          deg: 10
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-27 00:00:00"
+      },
+      {
+        dt: 1585278000,
+        main: {
+          temp: 284.71,
+          feels_like: 282.56,
+          temp_min: 284.71,
+          temp_max: 284.71,
+          pressure: 1007,
+          sea_level: 1007,
+          grnd_level: 974,
+          humidity: 92,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 85
+        },
+        wind: {
+          speed: 3.26,
+          deg: 7
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-27 03:00:00"
+      },
+      {
+        dt: 1585288800,
+        main: {
+          temp: 284.14,
+          feels_like: 281.16,
+          temp_min: 284.14,
+          temp_max: 284.14,
+          pressure: 1006,
+          sea_level: 1006,
+          grnd_level: 972,
+          humidity: 94,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10n"
+          }
+        ],
+        clouds: {
+          all: 92
+        },
+        wind: {
+          speed: 4.34,
+          deg: 117
+        },
+        rain: {
+          "3h": 0.5
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-27 06:00:00"
+      },
+      {
+        dt: 1585299600,
+        main: {
+          temp: 283.88,
+          feels_like: 281.38,
+          temp_min: 283.88,
+          temp_max: 283.88,
+          pressure: 1004,
+          sea_level: 1004,
+          grnd_level: 971,
+          humidity: 96,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10n"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.68,
+          deg: 53
+        },
+        rain: {
+          "3h": 0.63
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-27 09:00:00"
+      },
+      {
+        dt: 1585310400,
+        main: {
+          temp: 284.4,
+          feels_like: 281.74,
+          temp_min: 284.4,
+          temp_max: 284.4,
+          pressure: 1005,
+          sea_level: 1005,
+          grnd_level: 972,
+          humidity: 95,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04n"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 4.05,
+          deg: 65
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-27 12:00:00"
+      },
+      {
+        dt: 1585321200,
+        main: {
+          temp: 285.9,
+          feels_like: 283.92,
+          temp_min: 285.9,
+          temp_max: 285.9,
+          pressure: 1004,
+          sea_level: 1004,
+          grnd_level: 971,
+          humidity: 93,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.56,
+          deg: 67
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-27 15:00:00"
+      },
+      {
+        dt: 1585332000,
+        main: {
+          temp: 288.36,
+          feels_like: 287.79,
+          temp_min: 288.36,
+          temp_max: 288.36,
+          pressure: 1004,
+          sea_level: 1004,
+          grnd_level: 971,
+          humidity: 86,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 2.1,
+          deg: 72
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-27 18:00:00"
+      },
+      {
+        dt: 1585342800,
+        main: {
+          temp: 291.66,
+          feels_like: 291.56,
+          temp_min: 291.66,
+          temp_max: 291.66,
+          pressure: 1001,
+          sea_level: 1001,
+          grnd_level: 969,
+          humidity: 82,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 2.65,
+          deg: 35
+        },
+        rain: {
+          "3h": 0.25
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-27 21:00:00"
+      },
+      {
+        dt: 1585353600,
+        main: {
+          temp: 289.93,
+          feels_like: 289.49,
+          temp_min: 289.93,
+          temp_max: 289.93,
+          pressure: 1001,
+          sea_level: 1001,
+          grnd_level: 969,
+          humidity: 91,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10d"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 3.09,
+          deg: 63
+        },
+        rain: {
+          "3h": 0.75
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-28 00:00:00"
+      },
+      {
+        dt: 1585364400,
+        main: {
+          temp: 287.37,
+          feels_like: 287.01,
+          temp_min: 287.37,
+          temp_max: 287.37,
+          pressure: 1000,
+          sea_level: 1000,
+          grnd_level: 968,
+          humidity: 97,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10n"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 2.2,
+          deg: 48
+        },
+        rain: {
+          "3h": 1.5
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-28 03:00:00"
+      },
+      {
+        dt: 1585375200,
+        main: {
+          temp: 289,
+          feels_like: 287.74,
+          temp_min: 289,
+          temp_max: 289,
+          pressure: 999,
+          sea_level: 999,
+          grnd_level: 966,
+          humidity: 95,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 501,
+            main: "Rain",
+            description: "moderate rain",
+            icon: "10n"
+          }
+        ],
+        clouds: {
+          all: 100
+        },
+        wind: {
+          speed: 4.13,
+          deg: 129
+        },
+        rain: {
+          "3h": 7.63
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-28 06:00:00"
+      },
+      {
+        dt: 1585386000,
+        main: {
+          temp: 290.1,
+          feels_like: 288.15,
+          temp_min: 290.1,
+          temp_max: 290.1,
+          pressure: 996,
+          sea_level: 996,
+          grnd_level: 964,
+          humidity: 91,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10n"
+          }
+        ],
+        clouds: {
+          all: 83
+        },
+        wind: {
+          speed: 5.34,
+          deg: 173
+        },
+        rain: {
+          "3h": 0.81
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-28 09:00:00"
+      },
+      {
+        dt: 1585396800,
+        main: {
+          temp: 290.06,
+          feels_like: 286.91,
+          temp_min: 290.06,
+          temp_max: 290.06,
+          pressure: 994,
+          sea_level: 994,
+          grnd_level: 961,
+          humidity: 85,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10n"
+          }
+        ],
+        clouds: {
+          all: 58
+        },
+        wind: {
+          speed: 6.49,
+          deg: 187
+        },
+        rain: {
+          "3h": 0.5
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-28 12:00:00"
+      },
+      {
+        dt: 1585407600,
+        main: {
+          temp: 287.96,
+          feels_like: 281.1,
+          temp_min: 287.96,
+          temp_max: 287.96,
+          pressure: 995,
+          sea_level: 995,
+          grnd_level: 963,
+          humidity: 75,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 800,
+            main: "Clear",
+            description: "clear sky",
+            icon: "01d"
+          }
+        ],
+        clouds: {
+          all: 0
+        },
+        wind: {
+          speed: 10.03,
+          deg: 237
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-28 15:00:00"
+      },
+      {
+        dt: 1585418400,
+        main: {
+          temp: 286.86,
+          feels_like: 279.72,
+          temp_min: 286.86,
+          temp_max: 286.86,
+          pressure: 1000,
+          sea_level: 1000,
+          grnd_level: 967,
+          humidity: 66,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10d"
+          }
+        ],
+        clouds: {
+          all: 46
+        },
+        wind: {
+          speed: 9.36,
+          deg: 272
+        },
+        rain: {
+          "3h": 0.25
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-28 18:00:00"
+      },
+      {
+        dt: 1585429200,
+        main: {
+          temp: 285.06,
+          feels_like: 277.53,
+          temp_min: 285.06,
+          temp_max: 285.06,
+          pressure: 1003,
+          sea_level: 1003,
+          grnd_level: 970,
+          humidity: 66,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 500,
+            main: "Rain",
+            description: "light rain",
+            icon: "10d"
+          }
+        ],
+        clouds: {
+          all: 95
+        },
+        wind: {
+          speed: 9.37,
+          deg: 281
+        },
+        rain: {
+          "3h": 0.13
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-28 21:00:00"
+      },
+      {
+        dt: 1585440000,
+        main: {
+          temp: 283.61,
+          feels_like: 276.64,
+          temp_min: 283.61,
+          temp_max: 283.61,
+          pressure: 1007,
+          sea_level: 1007,
+          grnd_level: 973,
+          humidity: 64,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 804,
+            main: "Clouds",
+            description: "overcast clouds",
+            icon: "04d"
+          }
+        ],
+        clouds: {
+          all: 98
+        },
+        wind: {
+          speed: 8.06,
+          deg: 291
+        },
+        sys: {
+          pod: "d"
+        },
+        dt_txt: "2020-03-29 00:00:00"
+      },
+      {
+        dt: 1585450800,
+        main: {
+          temp: 281.76,
+          feels_like: 275.15,
+          temp_min: 281.76,
+          temp_max: 281.76,
+          pressure: 1009,
+          sea_level: 1009,
+          grnd_level: 975,
+          humidity: 63,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 801,
+            main: "Clouds",
+            description: "few clouds",
+            icon: "02n"
+          }
+        ],
+        clouds: {
+          all: 22
+        },
+        wind: {
+          speed: 7.04,
+          deg: 292
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-29 03:00:00"
+      },
+      {
+        dt: 1585461600,
+        main: {
+          temp: 280.76,
+          feels_like: 274.75,
+          temp_min: 280.76,
+          temp_max: 280.76,
+          pressure: 1012,
+          sea_level: 1012,
+          grnd_level: 978,
+          humidity: 66,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 801,
+            main: "Clouds",
+            description: "few clouds",
+            icon: "02n"
+          }
+        ],
+        clouds: {
+          all: 11
+        },
+        wind: {
+          speed: 6.12,
+          deg: 280
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-29 06:00:00"
+      },
+      {
+        dt: 1585472400,
+        main: {
+          temp: 279.9,
+          feels_like: 273.95,
+          temp_min: 279.9,
+          temp_max: 279.9,
+          pressure: 1013,
+          sea_level: 1013,
+          grnd_level: 979,
+          humidity: 63,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 800,
+            main: "Clear",
+            description: "clear sky",
+            icon: "01n"
+          }
+        ],
+        clouds: {
+          all: 0
+        },
+        wind: {
+          speed: 5.7,
+          deg: 276
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-29 09:00:00"
+      },
+      {
+        dt: 1585483200,
+        main: {
+          temp: 279.3,
+          feels_like: 273.47,
+          temp_min: 279.3,
+          temp_max: 279.3,
+          pressure: 1016,
+          sea_level: 1016,
+          grnd_level: 982,
+          humidity: 63,
+          temp_kf: 0
+        },
+        weather: [
+          {
+            id: 800,
+            main: "Clear",
+            description: "clear sky",
+            icon: "01n"
+          }
+        ],
+        clouds: {
+          all: 0
+        },
+        wind: {
+          speed: 5.42,
+          deg: 283
+        },
+        sys: {
+          pod: "n"
+        },
+        dt_txt: "2020-03-29 12:00:00"
+      }
+    ],
+    city: {
+      name: "Kansas City",
+      coord: {
+        lat: 38.9713,
+        lon: -94.5774
+      },
+      country: "US",
+      timezone: -18000,
+      sunrise: 1585052072,
+      sunset: 1585096447
+    }
+  },
+
   weather: {
     data: [
       {
@@ -468,543 +1892,439 @@ const store = {
     state_code: "MO"
   },
 
-  arrivals: {
-    pagination: {
-      limit: 5,
-      offset: 0,
-      count: 5,
-      total: 656
-    },
-    data: [
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Los Angeles International",
-          timezone: "America/Los_Angeles",
-          iata: "LAX",
-          icao: "KLAX",
-          terminal: "2",
-          gate: "23A",
-          delay: null,
-          scheduled: "2020-03-23T09:25:00+00:00",
-          estimated: "2020-03-23T09:25:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
+  arrivals: [
+    {
+      movement: {
+        airport: {
+          icao: "KORD",
+          iata: "ORD",
+          name: "Chicago"
         },
-        arrival: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "B",
-          gate: "58",
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T14:27:00+00:00",
-          estimated: "2020-03-23T14:27:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Delta Air Lines",
-          iata: "DL",
-          icao: "DAL"
-        },
-        flight: {
-          number: "2742",
-          iata: "DL2742",
-          icao: "DAL2742",
-          codeshared: null
-        },
-        aircraft: null,
-        live: null
+        scheduledTimeLocal: "2020-03-23 12:11-05:00",
+        scheduledTimeUtc: "2020-03-23 17:11Z",
+        quality: ["Basic"]
       },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Los Angeles International",
-          timezone: "America/Los_Angeles",
-          iata: "LAX",
-          icao: "KLAX",
-          terminal: "2",
-          gate: "23A",
-          delay: null,
-          scheduled: "2020-03-23T09:25:00+00:00",
-          estimated: "2020-03-23T09:25:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "B",
-          gate: "58",
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T14:27:00+00:00",
-          estimated: "2020-03-23T14:27:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "WestJet",
-          iata: "WS",
-          icao: "WJA"
-        },
-        flight: {
-          number: "6932",
-          iata: "WS6932",
-          icao: "WJA6932",
-          codeshared: {
-            airline_name: "delta air lines",
-            airline_iata: "dl",
-            airline_icao: "dal",
-            flight_number: "2742",
-            flight_iata: "dl2742",
-            flight_icao: "dal2742"
-          }
-        },
-        aircraft: null,
-        live: null
+      number: "UA 3702",
+      status: "Unknown",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        model: "Embraer 170"
       },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Los Angeles International",
-          timezone: "America/Los_Angeles",
-          iata: "LAX",
-          icao: "KLAX",
-          terminal: "2",
-          gate: "23A",
-          delay: null,
-          scheduled: "2020-03-23T09:25:00+00:00",
-          estimated: "2020-03-23T09:25:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "B",
-          gate: "58",
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T14:27:00+00:00",
-          estimated: "2020-03-23T14:27:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Virgin Atlantic",
-          iata: "VS",
-          icao: "VIR"
-        },
-        flight: {
-          number: "2089",
-          iata: "VS2089",
-          icao: "VIR2089",
-          codeshared: {
-            airline_name: "delta air lines",
-            airline_iata: "dl",
-            airline_icao: "dal",
-            flight_number: "2742",
-            flight_iata: "dl2742",
-            flight_icao: "dal2742"
-          }
-        },
-        aircraft: null,
-        live: null
-      },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Los Angeles International",
-          timezone: "America/Los_Angeles",
-          iata: "LAX",
-          icao: "KLAX",
-          terminal: "2",
-          gate: "23A",
-          delay: null,
-          scheduled: "2020-03-23T09:25:00+00:00",
-          estimated: "2020-03-23T09:25:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "B",
-          gate: "58",
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T14:27:00+00:00",
-          estimated: "2020-03-23T14:27:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Virgin Australia",
-          iata: "VA",
-          icao: "VOZ"
-        },
-        flight: {
-          number: "6458",
-          iata: "VA6458",
-          icao: "VOZ6458",
-          codeshared: {
-            airline_name: "delta air lines",
-            airline_iata: "dl",
-            airline_icao: "dal",
-            flight_number: "2742",
-            flight_iata: "dl2742",
-            flight_icao: "dal2742"
-          }
-        },
-        aircraft: null,
-        live: null
-      },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Mc Carran International",
-          timezone: "America/Los_Angeles",
-          iata: "LAS",
-          icao: "KLAS",
-          terminal: "1",
-          gate: null,
-          delay: null,
-          scheduled: "2020-03-23T09:40:00+00:00",
-          estimated: "2020-03-23T09:40:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "C",
-          gate: null,
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T14:22:00+00:00",
-          estimated: "2020-03-23T14:22:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Spirit Airlines",
-          iata: "NK",
-          icao: "NKS"
-        },
-        flight: {
-          number: "195",
-          iata: "NK195",
-          icao: "NKS195",
-          codeshared: null
-        },
-        aircraft: null,
-        live: null
+      airline: {
+        name: "United"
       }
-    ]
-  },
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KLAX",
+          iata: "LAX",
+          name: "Los Angeles"
+        },
+        scheduledTimeLocal: "2020-03-23 12:55-05:00",
+        actualTimeLocal: "2020-03-23 12:13-05:00",
+        runwayTimeLocal: "2020-03-23 12:13-05:00",
+        scheduledTimeUtc: "2020-03-23 17:55Z",
+        actualTimeUtc: "2020-03-23 17:13Z",
+        runwayTimeUtc: "2020-03-23 17:13Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "WN 2085",
+      callSign: "SWA2085",
+      status: "Arrived",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N416WN",
+        model: "Boeing 737-700 (winglets)"
+      },
+      airline: {
+        name: "Southwest"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KSAN",
+          iata: "SAN",
+          name: "San Diego"
+        },
+        scheduledTimeLocal: "2020-03-23 12:15-05:00",
+        scheduledTimeUtc: "2020-03-23 17:15Z",
+        quality: ["Basic"]
+      },
+      number: "WN 1119",
+      status: "Unknown",
+      codeshareStatus: "Unknown",
+      isCargo: false,
+      aircraft: {
+        model: "Boeing 737-700"
+      },
+      airline: {
+        name: "Southwest"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KPHX",
+          iata: "PHX",
+          name: "Phoenix"
+        },
+        scheduledTimeLocal: "2020-03-23 12:50-05:00",
+        actualTimeLocal: "2020-03-23 12:22-05:00",
+        runwayTimeLocal: "2020-03-23 12:22-05:00",
+        scheduledTimeUtc: "2020-03-23 17:50Z",
+        actualTimeUtc: "2020-03-23 17:22Z",
+        runwayTimeUtc: "2020-03-23 17:22Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "WN 2584",
+      callSign: "SWA2584",
+      status: "Arrived",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N468WN",
+        model: "Boeing 737-700 (winglets)"
+      },
+      airline: {
+        name: "Southwest"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KSAT",
+          iata: "SAT",
+          name: "San Antonio"
+        },
+        scheduledTimeLocal: "2020-03-23 12:40-05:00",
+        actualTimeLocal: "2020-03-23 12:31-05:00",
+        runwayTimeLocal: "2020-03-23 12:31-05:00",
+        scheduledTimeUtc: "2020-03-23 17:40Z",
+        actualTimeUtc: "2020-03-23 17:31Z",
+        runwayTimeUtc: "2020-03-23 17:31Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "WN 2722",
+      callSign: "SWA2722",
+      status: "Arrived",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N951WN",
+        model: "Boeing 737-700 (winglets)"
+      },
+      airline: {
+        name: "Southwest"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KPHX",
+          iata: "PHX",
+          name: "Phoenix"
+        },
+        scheduledTimeLocal: "2020-03-23 13:26-05:00",
+        actualTimeLocal: "2020-03-23 12:43-05:00",
+        runwayTimeLocal: "2020-03-23 12:43-05:00",
+        scheduledTimeUtc: "2020-03-23 18:26Z",
+        actualTimeUtc: "2020-03-23 17:43Z",
+        runwayTimeUtc: "2020-03-23 17:43Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "AA 843",
+      callSign: "AAL843",
+      status: "Arrived",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N767UW",
+        model: "Airbus A319"
+      },
+      airline: {
+        name: "American"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KBWI",
+          iata: "BWI",
+          name: "Baltimore"
+        },
+        scheduledTimeLocal: "2020-03-23 12:15-05:00",
+        actualTimeLocal: "2020-03-23 12:47-05:00",
+        runwayTimeLocal: "2020-03-23 12:47-05:00",
+        scheduledTimeUtc: "2020-03-23 17:15Z",
+        actualTimeUtc: "2020-03-23 17:47Z",
+        runwayTimeUtc: "2020-03-23 17:47Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "WN 4798",
+      callSign: "SWA4798",
+      status: "Arrived",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N237WN",
+        model: "Boeing 737-700 (winglets)"
+      },
+      airline: {
+        name: "Southwest"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KSLC",
+          iata: "SLC",
+          name: "Salt Lake City"
+        },
+        scheduledTimeLocal: "2020-03-23 13:29-05:00",
+        actualTimeLocal: "2020-03-23 13:00-05:00",
+        runwayTimeLocal: "2020-03-23 13:00-05:00",
+        scheduledTimeUtc: "2020-03-23 18:29Z",
+        actualTimeUtc: "2020-03-23 18:00Z",
+        runwayTimeUtc: "2020-03-23 18:00Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "DL 3971",
+      callSign: "DAL3971",
+      status: "Arrived",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N302SY",
+        model: "Embraer 175"
+      },
+      airline: {
+        name: "Delta Air Lines"
+      }
+    }
+  ],
 
-  departures: {
-    pagination: {
-      limit: 5,
-      offset: 0,
-      count: 5,
-      total: 729
-    },
-    data: [
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "C",
-          gate: null,
-          delay: null,
-          scheduled: "2020-03-23T11:00:00+00:00",
-          estimated: "2020-03-23T11:00:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
+  departures: [
+    {
+      movement: {
+        airport: {
+          icao: "KORD",
+          iata: "ORD",
+          name: "Chicago"
         },
-        arrival: {
-          airport: "George Bush Intercontinental",
-          timezone: "America/Chicago",
-          iata: "IAH",
-          icao: "KIAH",
-          terminal: "B",
-          gate: null,
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T13:11:00+00:00",
-          estimated: "2020-03-23T13:11:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Mesa Airlines",
-          iata: "YV",
-          icao: "ASH"
-        },
-        flight: {
-          number: "6097",
-          iata: "YV6097",
-          icao: "ASH6097",
-          codeshared: null
-        },
-        aircraft: null,
-        live: null
+        scheduledTimeLocal: "2020-03-23 12:18-05:00",
+        scheduledTimeUtc: "2020-03-23 17:18Z",
+        quality: ["Basic"]
       },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "C",
-          gate: null,
-          delay: null,
-          scheduled: "2020-03-23T11:00:00+00:00",
-          estimated: "2020-03-23T11:00:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "George Bush Intercontinental",
-          timezone: "America/Chicago",
-          iata: "IAH",
-          icao: "KIAH",
-          terminal: "B",
-          gate: null,
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T13:11:00+00:00",
-          estimated: "2020-03-23T13:11:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "United Airlines",
-          iata: "UA",
-          icao: "UAL"
-        },
-        flight: {
-          number: "6097",
-          iata: "UA6097",
-          icao: "UAL6097",
-          codeshared: {
-            airline_name: "mesa airlines",
-            airline_iata: "yv",
-            airline_icao: "ash",
-            flight_number: "6097",
-            flight_iata: "yv6097",
-            flight_icao: "ash6097"
-          }
-        },
-        aircraft: {
-          registration: "N510MJ",
-          iata: "CRJ7",
-          icao: "CRJ7",
-          icao24: "A6628B"
-        },
-        live: {
-          updated: "2020-03-22T16:25:59+00:00",
-          latitude: 37.89,
-          longitude: -95.22,
-          altitude: 11590,
-          direction: 194.99,
-          speed_horizontal: 809.064,
-          speed_vertical: 0,
-          is_ground: false
-        }
+      number: "AA 3265",
+      status: "Unknown",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        model: "Bombardier CRJ700"
       },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "C",
-          gate: null,
-          delay: null,
-          scheduled: "2020-03-23T11:00:00+00:00",
-          estimated: "2020-03-23T11:00:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "George Bush Intercontinental",
-          timezone: "America/Chicago",
-          iata: "IAH",
-          icao: "KIAH",
-          terminal: "B",
-          gate: null,
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T13:11:00+00:00",
-          estimated: "2020-03-23T13:11:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Air New Zealand",
-          iata: "NZ",
-          icao: "ANZ"
-        },
-        flight: {
-          number: "6701",
-          iata: "NZ6701",
-          icao: "ANZ6701",
-          codeshared: {
-            airline_name: "mesa airlines",
-            airline_iata: "yv",
-            airline_icao: "ash",
-            flight_number: "6097",
-            flight_iata: "yv6097",
-            flight_icao: "ash6097"
-          }
-        },
-        aircraft: null,
-        live: null
-      },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "C",
-          gate: null,
-          delay: null,
-          scheduled: "2020-03-23T11:00:00+00:00",
-          estimated: "2020-03-23T11:00:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "George Bush Intercontinental",
-          timezone: "America/Chicago",
-          iata: "IAH",
-          icao: "KIAH",
-          terminal: "B",
-          gate: null,
-          baggage: null,
-          delay: null,
-          scheduled: "2020-03-23T13:11:00+00:00",
-          estimated: "2020-03-23T13:11:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Copa Airlines",
-          iata: "CM",
-          icao: "CMP"
-        },
-        flight: {
-          number: "1578",
-          iata: "CM1578",
-          icao: "CMP1578",
-          codeshared: {
-            airline_name: "mesa airlines",
-            airline_iata: "yv",
-            airline_icao: "ash",
-            flight_number: "6097",
-            flight_iata: "yv6097",
-            flight_icao: "ash6097"
-          }
-        },
-        aircraft: null,
-        live: null
-      },
-      {
-        flight_date: "2020-03-23",
-        flight_status: "scheduled",
-        departure: {
-          airport: "Kansas City International Airport",
-          timezone: "America/Chicago",
-          iata: "MCI",
-          icao: "KMCI",
-          terminal: "C",
-          gate: "83",
-          delay: null,
-          scheduled: "2020-03-23T10:58:00+00:00",
-          estimated: "2020-03-23T10:58:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        arrival: {
-          airport: "Philadelphia International",
-          timezone: "America/New_York",
-          iata: "PHL",
-          icao: "KPHL",
-          terminal: "B",
-          gate: "B4",
-          baggage: "A",
-          delay: null,
-          scheduled: "2020-03-23T14:36:00+00:00",
-          estimated: "2020-03-23T14:36:00+00:00",
-          actual: null,
-          estimated_runway: null,
-          actual_runway: null
-        },
-        airline: {
-          name: "Republic Airways",
-          iata: "YX",
-          icao: "RPA"
-        },
-        flight: {
-          number: "4419",
-          iata: "YX4419",
-          icao: "RPA4419",
-          codeshared: null
-        },
-        aircraft: null,
-        live: null
+      airline: {
+        name: "American"
       }
-    ]
-  }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KCLT",
+          iata: "CLT",
+          name: "Charlotte"
+        },
+        scheduledTimeLocal: "2020-03-23 12:12-05:00",
+        scheduledTimeUtc: "2020-03-23 17:12Z",
+        quality: ["Basic"]
+      },
+      number: "AA 605",
+      status: "Unknown",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        model: "Airbus A319"
+      },
+      airline: {
+        name: "American"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KDFW",
+          iata: "DFW",
+          name: "Dallas-Fort Worth"
+        },
+        scheduledTimeLocal: "2020-03-23 12:00-05:00",
+        scheduledTimeUtc: "2020-03-23 17:00Z",
+        quality: ["Basic"]
+      },
+      number: "AA 4168",
+      status: "Unknown",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        model: "Embraer 175"
+      },
+      airline: {
+        name: "American"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KBOS",
+          iata: "BOS",
+          name: "Boston"
+        },
+        scheduledTimeLocal: "2020-03-23 12:15-05:00",
+        actualTimeLocal: "2020-03-23 12:19-05:00",
+        runwayTimeLocal: "2020-03-23 12:19-05:00",
+        scheduledTimeUtc: "2020-03-23 17:15Z",
+        actualTimeUtc: "2020-03-23 17:19Z",
+        runwayTimeUtc: "2020-03-23 17:19Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "DL 5994",
+      callSign: "DAL5994",
+      status: "Departed",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N815MD",
+        model: "Embraer 175"
+      },
+      airline: {
+        name: "Delta Air Lines"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KDAL",
+          iata: "DAL",
+          name: "Dallas"
+        },
+        scheduledTimeLocal: "2020-03-23 12:20-05:00",
+        scheduledTimeUtc: "2020-03-23 17:20Z",
+        quality: ["Basic"]
+      },
+      number: "WN 2600",
+      status: "Unknown",
+      codeshareStatus: "Unknown",
+      isCargo: false,
+      aircraft: {
+        model: "Boeing 737-700"
+      },
+      airline: {
+        name: "Southwest"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KLAX",
+          iata: "LAX",
+          name: "Los Angeles"
+        },
+        scheduledTimeLocal: "2020-03-23 07:45-05:00",
+        actualTimeLocal: "2020-03-23 12:24-05:00",
+        runwayTimeLocal: "2020-03-23 12:24-05:00",
+        scheduledTimeUtc: "2020-03-23 12:45Z",
+        actualTimeUtc: "2020-03-23 17:24Z",
+        runwayTimeUtc: "2020-03-23 17:24Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "NK 913",
+      callSign: "NKS913",
+      status: "Departed",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N654NK",
+        model: "Airbus A320-100/200"
+      },
+      airline: {
+        name: "Spirit"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KIAD",
+          iata: "IAD",
+          name: "Washington"
+        },
+        scheduledTimeLocal: "2020-03-23 13:00-05:00",
+        scheduledTimeUtc: "2020-03-23 18:00Z",
+        quality: ["Basic"]
+      },
+      number: "UA 3719",
+      status: "Unknown",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        model: "Embraer 170"
+      },
+      airline: {
+        name: "United Airlines"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KDTW",
+          iata: "DTW",
+          name: "Detroit"
+        },
+        scheduledTimeLocal: "2020-03-23 12:30-05:00",
+        actualTimeLocal: "2020-03-23 12:35-05:00",
+        runwayTimeLocal: "2020-03-23 12:35-05:00",
+        scheduledTimeUtc: "2020-03-23 17:30Z",
+        actualTimeUtc: "2020-03-23 17:35Z",
+        runwayTimeUtc: "2020-03-23 17:35Z",
+        quality: ["Basic", "Live"]
+      },
+      number: "NK 627",
+      callSign: "NKS627",
+      status: "Departed",
+      codeshareStatus: "IsOperator",
+      isCargo: false,
+      aircraft: {
+        reg: "N696NK",
+        model: "Airbus A320-100/200"
+      },
+      airline: {
+        name: "Spirit Airlines"
+      }
+    },
+    {
+      movement: {
+        airport: {
+          icao: "KATL",
+          iata: "ATL",
+          name: "Atlanta"
+        },
+        scheduledTimeLocal: "2020-03-23 12:46-05:00",
+        scheduledTimeUtc: "2020-03-23 17:46Z",
+        quality: ["Basic"]
+      },
+      number: "DL 2075",
+      status: "Unknown",
+      codeshareStatus: "Unknown",
+      isCargo: false,
+      aircraft: {
+        model: "McDonnell Douglas MD-88"
+      },
+      airline: {
+        name: "Delta Air Lines"
+      }
+    }
+  ]
 };
 
 export default store;

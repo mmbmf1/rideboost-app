@@ -1,5 +1,4 @@
 import React from "react";
-// import Surge from "./Surge/Surge";
 import Weather from "./Weather/Weather";
 import Events from "./Events/Events";
 import Airline from "./Airline/Airline";
@@ -13,11 +12,12 @@ export default class Dashboard extends React.Component {
     };
   }
   render() {
-    // console.log(this.state);
     return (
       <div>
-        {/* <Surge /> */}
-        <Weather weather={this.state.store.weather} />
+        <Weather
+          currentWeather={this.state.store.currentWeather}
+          forecastWeather={this.state.store.forecastWeather}
+        />
         <Airline
           arrivals={this.state.store.arrivals}
           departures={this.state.store.departures}

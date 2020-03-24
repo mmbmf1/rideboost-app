@@ -1,22 +1,15 @@
 import React from "react";
 
 export default class Airline extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     arrivals: "",
-  //     departures: ""
-  //   };
-  // }
-
+  //Move arrivals departures into components?
+  //convert times function -> can this be shared with events and weather?
+  //Lookup airport name by location - API
   render() {
-    const arrivals = this.props.arrivals.data;
-    // console.log(arrivals);
-    const departures = this.props.departures.data;
-    // console.log(departures);
+    const arrivals = this.props.arrivals;
+    const departures = this.props.departures;
     return (
       <div className="airline-container">
-        <h3>Airport Arrivals</h3>
+        <h3>MCI Arrivals</h3>
         <table>
           <thead>
             <tr>
@@ -31,15 +24,17 @@ export default class Airline extends React.Component {
             <tbody key={index}>
               <tr>
                 <td>{a.airline.name}</td>
-                <td>{a.flight.number}</td>
-                <td>{a.departure.airport}</td>
-                <td>{a.flight_status}</td>
-                <td>{a.arrival.scheduled}</td>
+                <td>{a.number}</td>
+                <td>{a.movement.airport.name}</td>
+                <td>{a.status}</td>
+                <td>
+                  {new Date(a.movement.scheduledTimeUtc).toLocaleTimeString()}
+                </td>
               </tr>
             </tbody>
           ))}
         </table>
-        <h3>Airport Departures</h3>
+        <h3>MCI Departures</h3>
         <table>
           <thead>
             <tr>
@@ -47,17 +42,19 @@ export default class Airline extends React.Component {
               <th>Flight #</th>
               <th>To</th>
               <th>Status</th>
-              <th>Scheduled Arrival Time</th>
+              <th>Scheduled Departure Time</th>
             </tr>
           </thead>
           {departures.map((d, index) => (
             <tbody key={index}>
               <tr>
                 <td>{d.airline.name}</td>
-                <td>{d.flight.number}</td>
-                <td>To: {d.arrival.airport}</td>
-                <td>{d.flight_status}</td>
-                <td>{d.departure.scheduled}</td>
+                <td>{d.number}</td>
+                <td>{d.movement.airport.name}</td>
+                <td>{d.status}</td>
+                <td>
+                  {new Date(d.movement.scheduledTimeUtc).toLocaleTimeString()}
+                </td>
               </tr>
             </tbody>
           ))}

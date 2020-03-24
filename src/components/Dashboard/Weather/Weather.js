@@ -1,41 +1,66 @@
 import React from "react";
 
 export default class Weather extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     weather: {}
-  //   };
-  // }
-
   render() {
-    const weather = this.props.weather.data.map(d => d.weather);
-    // console.log(weather);
+    const currentWeather = this.props.currentWeather;
+    const forecastWeather = this.props.forecastWeather;
+    //convert Math.round & new dates into functions
     return (
       <div className="weather-container">
-        <h3>Current Weather</h3>
         <ul>
           <li>
             <img
-              src={`/icons/${weather[0].icon}.png`}
-              alt="day 1 current weather icon"
+              src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
+              alt="current weather"
               className="weather-icon"
             />
-            <p>{weather[0].description}</p>
+            <p>
+              {Math.round(currentWeather.main.temp * (9 / 5) - 459.67)}
+              {"\xB0"}F
+            </p>
+            <p>{currentWeather.name}</p>
           </li>
           <li>
             <img
-              src={`/icons/${weather[1].icon}.png`}
-              alt="day 1 current weather icon"
+              src={`http://openweathermap.org/img/wn/${forecastWeather.list[0].weather[0].icon}@2x.png`}
+              alt="forecast weather"
+              className="weather-icon"
             />
-            <p>{weather[1].description}</p>
+            <p>
+              {Math.round(forecastWeather.list[0].main.temp * (9 / 5) - 459.67)}
+              {"\xB0"}F
+            </p>
+            <p>
+              {new Date(forecastWeather.list[0].dt_txt).toLocaleTimeString()}
+            </p>
           </li>
           <li>
             <img
-              src={`/icons/${weather[2].icon}.png`}
-              alt="day 1 current weather icon"
+              src={`http://openweathermap.org/img/wn/${forecastWeather.list[1].weather[0].icon}@2x.png`}
+              alt="forecast weather"
+              className="weather-icon"
             />
-            <p>{weather[2].description}</p>
+            <p>
+              {Math.round(forecastWeather.list[1].main.temp * (9 / 5) - 459.67)}
+              {"\xB0"}F
+            </p>
+            <p>
+              {new Date(forecastWeather.list[1].dt_txt).toLocaleTimeString()}
+            </p>
+          </li>
+          <li>
+            <img
+              src={`http://openweathermap.org/img/wn/${forecastWeather.list[2].weather[0].icon}@2x.png`}
+              alt="forecast weather"
+              className="weather-icon"
+            />
+            <p>
+              {Math.round(forecastWeather.list[2].main.temp * (9 / 5) - 459.67)}
+              {"\xB0"}F
+            </p>
+            <p>
+              {new Date(forecastWeather.list[2].dt_txt).toLocaleTimeString()}
+            </p>
           </li>
         </ul>
       </div>
