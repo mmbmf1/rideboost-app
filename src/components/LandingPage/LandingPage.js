@@ -5,7 +5,7 @@ export default class LandingPage extends React.Component {
   static contextType = RideBoostContext;
 
   render() {
-    const content = this.context;
+    const content = this.context.content;
     return (
       <main role="main" className="landing-page">
         <div className="main-wrapper">

@@ -1,9 +1,12 @@
 import React from "react";
-import ValidationError from "../../Utils/ValidationError";
+import RideBoostContext from "../../contexts/RideBoostContext";
+import ValidationError from "../../utils/ValidationError";
 import TokenService from "../../services/token-service";
 import AuthApiService from "../../services/auth-api-service";
 
 export default class LoginForm extends React.Component {
+  static contextType = RideBoostContext;
+
   constructor() {
     super();
     this.state = {
@@ -31,10 +34,11 @@ export default class LoginForm extends React.Component {
         user_email.value = "";
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
+        TokenService.saveUserId(res.payload.user_id);
+        this.context.setLoggedIn(true);
         this.props.onLoginSuccess();
       })
       .catch(res => {
-        console.log(res.error);
         this.setState({ error: res.error });
       });
   };

@@ -1,6 +1,6 @@
 import React from "react";
 import SignupForm from "../../components/SignupForm/SignupForm";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default class SignupPage extends React.Component {
   static defaultProps = {
@@ -17,10 +17,10 @@ export default class SignupPage extends React.Component {
     return (
       <div className="signup-main">
         <SignupForm onSignupSuccess={this.handleSignupSuccess} />
-        <div>
+        {/* <div>
           <p>Already Have an Account?</p>
           <Link to={"/login"}>Login</Link>
-        </div>
+        </div> */}
       </div>
     );
   }

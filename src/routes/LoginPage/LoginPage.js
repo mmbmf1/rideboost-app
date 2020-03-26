@@ -1,10 +1,21 @@
 import React from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
+import RideBoostContext from "../../contexts/RideBoostContext";
 import { Link } from "react-router-dom";
+import TokenService from "../../services/token-service";
 
 export default class LoginPage extends React.Component {
+  static contextType = RideBoostContext;
+
+  static defaultProps = {
+    history: {
+      push: () => {}
+    }
+  };
+
   handleLoginSuccess = () => {
-    this.props.history.push(`/demopage`);
+    const user_id = TokenService.getUserId();
+    this.props.history.push(`/dashboard/${user_id}`);
   };
 
   render() {
