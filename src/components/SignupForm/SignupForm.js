@@ -1,16 +1,24 @@
 import React from "react";
+import ValidatioError from "../../Utils/ValidationError";
 import AuthApiService from "../../services/auth-api-service";
 
 export default class SignupForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      error: ""
+      error: "",
+      hidden: true
     };
   }
 
   static defaultProps = {
     onSignupSuccess: () => {}
+  };
+
+  toggleShow = () => {
+    this.setState(prevState => ({
+      hidden: !prevState.hidden
+    }));
   };
 
   handleSubmit = e => {
@@ -40,10 +48,10 @@ export default class SignupForm extends React.Component {
   };
 
   render() {
-    //Add validation error component
-    // const error = this.state.error;
+    const error = this.state.error;
     return (
       <form className="registration-form" onSubmit={e => this.handleSubmit(e)}>
+        <ValidatioError message={error} />
         <label htmlFor="first_name">First Name:</label>
         <input type="text" name="first_name" />
         <label htmlFor="last_name">Last Name:</label>
@@ -51,7 +59,9 @@ export default class SignupForm extends React.Component {
         <label htmlFor="user_email">Email Address:</label>
         <input type="email" name="user_email" />
         <label htmlFor="password">Password:</label>
-        <input type="password" name="password" />
+        <input type={this.state.hidden ? "password" : "text"} name="password" />
+        <input type="checkbox" onChange={this.toggleShow} />
+        <label>Show Password</label>
         <label htmlFor="zip_code">ZIP Code:</label>
         <input type="text" name="zip_code" />
         <input type="submit" value="Create Account" />

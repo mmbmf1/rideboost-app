@@ -1,4 +1,5 @@
 import React from "react";
+import ValidationError from "../../Utils/ValidationError";
 import TokenService from "../../services/token-service";
 import AuthApiService from "../../services/auth-api-service";
 
@@ -6,9 +7,17 @@ export default class LoginForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      error: null
+      error: null,
+      hidden: true
     };
   }
+
+  toggleShow = () => {
+    this.setState(prevState => ({
+      hidden: !prevState.hidden
+    }));
+  };
+
   handleSubmitJwtAuth = e => {
     e.preventDefault();
     this.setState({ error: null });
@@ -31,13 +40,15 @@ export default class LoginForm extends React.Component {
   };
 
   render() {
-    //add error display, link to signup form, password display toggle
     return (
       <form className="login-form" onSubmit={e => this.handleSubmitJwtAuth(e)}>
+        <ValidationError message={this.state.error} />
         <label htmlFor="user_email">Email Address:</label>
         <input type="email" name="user_email" />
         <label htmlFor="password">Password:</label>
-        <input type="password" name="password" />
+        <input type={this.state.hidden ? "password" : "text"} name="password" />
+        <input type="checkbox" onChange={this.toggleShow} />
+        <label>Show Password</label>
         <input type="submit" value="Login" />
       </form>
     );
