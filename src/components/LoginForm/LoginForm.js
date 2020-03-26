@@ -31,6 +31,7 @@ export default class LoginForm extends React.Component {
   };
 
   render() {
+    //add error display, link to signup form, password display toggle
     return (
       <form className="login-form" onSubmit={e => this.handleSubmitJwtAuth(e)}>
         <label htmlFor="user_email">Email Address:</label>
