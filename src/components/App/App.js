@@ -6,7 +6,7 @@ import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../../routes/LoginPage/LoginPage";
 import SignupPage from "../../routes/SingupPage/SignupPage";
 import DemoPage from "../../routes/DemoPage/DemoPage";
-import Dashboard from "../Dashboard/Dashboard";
+import UserDashboard from "../../routes/UserDashboard/UserDashboard";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import Footer from "../Footer/Footer";
 import Content from "../../content";
@@ -38,7 +38,7 @@ export default class App extends React.Component {
           <Route exact path={"/signup"} component={SignupPage} />
           <Route exact path={"/login"} component={LoginPage} />
           <Route exact path={"/demopage"} component={DemoPage} />
-          <Route exact path={"/dashboard/:user_id"} component={Dashboard} />
+          <Route exact path={"/dashboard/:user_id"} component={UserDashboard} />
           <Route component={NotFoundPage} />
         </Switch>
         <Footer content={content} />
