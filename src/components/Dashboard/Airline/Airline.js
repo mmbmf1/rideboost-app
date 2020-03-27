@@ -8,7 +8,6 @@ import {
 
 export default class Airline extends React.Component {
   //Move arrivals departures into components?
-  //convert times function -> can this be shared with events and weather?
   //Lookup airport name by location - API
   render() {
     const arrivals = this.props.arrivals;

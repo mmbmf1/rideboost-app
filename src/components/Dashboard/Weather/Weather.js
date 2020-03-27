@@ -7,8 +7,6 @@ export default class Weather extends React.Component {
   render() {
     const currentWeather = this.props.currentWeather;
     const forecastWeather = this.props.forecastWeather;
-    //convert Math.round & new dates into functions
-    // console.log(convertTemp(currentWeather.main.temp));
     return (
       <div className="weather-container">
         <div className="dashboard-header">

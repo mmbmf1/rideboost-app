@@ -19,7 +19,9 @@ export default class Events extends React.Component {
                 <img src={`${e.image.thumb.url}`} alt="venue" />
               </div>
             ) : (
-              <div className="stock-img"></div>
+              <div className="stock-img">
+                <FontAwesomeIcon icon={faCalendarAlt} />
+              </div>
             )}
             <div className="event-info">
               <a href={e.url} target="_blank" rel="noopener noreferrer">

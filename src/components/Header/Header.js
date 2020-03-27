@@ -35,7 +35,6 @@ export default class Header extends React.Component {
 
   render() {
     const content = this.props.content;
-    // console.log(content.content.title);
     return (
       <nav role="navigation" className="nav">
         <div id="nav-left">
