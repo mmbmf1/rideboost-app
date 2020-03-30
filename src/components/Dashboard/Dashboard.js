@@ -38,7 +38,6 @@ export default class Dashboard extends React.Component {
       });
     } else {
       UserApiService.getUserDashboard(user_id).then(response => {
-        // console.log(response.data);
         this.setState({
           currentWeather: response.data[0],
           forecastWeather: response.data[1],
