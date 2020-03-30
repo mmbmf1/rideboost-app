@@ -11,6 +11,7 @@ export default class Dashboard extends React.Component {
     super();
     this.state = {
       store: store,
+      location: "Kansas City",
       currentWeather: null,
       forecastWeather: null,
       arrivals: null,
@@ -37,12 +38,14 @@ export default class Dashboard extends React.Component {
       });
     } else {
       UserApiService.getUserDashboard(user_id).then(response => {
+        // console.log(response.data);
         this.setState({
           currentWeather: response.data[0],
           forecastWeather: response.data[1],
           arrivals: response.data[2].arrivals,
           departures: response.data[3].departures,
-          events: response.data[4].events
+          events: response.data[4].events,
+          location: response.data[5].city
         });
       });
     }
@@ -51,7 +54,7 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <h3>Insert Location Here</h3>
+        <h3>{this.state.location}</h3>
         {this.state.currentWeather && (
           <Weather
             currentWeather={this.state.currentWeather}
