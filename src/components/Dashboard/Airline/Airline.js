@@ -34,7 +34,9 @@ export default class Airline extends React.Component {
                 <td>{a.airline.name}</td>
                 <td>{a.number}</td>
                 <td>{a.movement.airport.name}</td>
-                <td>{a.status}</td>
+                <td>
+                  {a.status === "CanceledUncertain" ? "Canceled" : a.status}
+                </td>
                 <td>{convertDate(a.movement.scheduledTimeUtc)}</td>
               </tr>
             </tbody>
@@ -60,7 +62,9 @@ export default class Airline extends React.Component {
                 <td>{d.airline.name}</td>
                 <td>{d.number}</td>
                 <td>{d.movement.airport.name}</td>
-                <td>{d.status}</td>
+                <td>
+                  {d.status === "CanceledUncertain" ? "Canceled" : d.status}
+                </td>
                 <td>{convertDate(d.movement.scheduledTimeUtc)}</td>
               </tr>
             </tbody>

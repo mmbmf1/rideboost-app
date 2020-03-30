@@ -1,7 +1,11 @@
 import React from "react";
 import { convertDate } from "../../../app-helpers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendarAlt,
+  faClock,
+  faMapMarkerAlt
+} from "@fortawesome/free-solid-svg-icons";
 
 export default class Events extends React.Component {
   render() {
@@ -27,12 +31,16 @@ export default class Events extends React.Component {
               <a href={e.url} target="_blank" rel="noopener noreferrer">
                 {e.title}
               </a>
-              <p>{convertDate(e.start_time)}</p>
+              <p>
+                <FontAwesomeIcon icon={faClock} />
+                {convertDate(e.start_time)}
+              </p>
               <a
-                href={`http://maps.google.com/?q=${e.venue_name}`}
+                href={`http://maps.google.com/?q=${e.venue_name},${e.venue_address},${e.city_name}, ${e.region_abbr}, ${e.postal_code}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
                 {e.venue_name}
               </a>
             </div>

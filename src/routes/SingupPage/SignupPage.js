@@ -16,6 +16,7 @@ export default class SignupPage extends React.Component {
   render() {
     return (
       <div className="signup-main">
+        <h3>Signup Form</h3> 
         <SignupForm onSignupSuccess={this.handleSignupSuccess} />
         {/* <div>
           <p>Already Have an Account?</p>

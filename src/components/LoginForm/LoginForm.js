@@ -51,8 +51,10 @@ export default class LoginForm extends React.Component {
         <input type="email" name="user_email" />
         <label htmlFor="password">Password:</label>
         <input type={this.state.hidden ? "password" : "text"} name="password" />
-        <input type="checkbox" onChange={this.toggleShow} />
-        <label>Show Password</label>
+        <div>
+          <input type="checkbox" onChange={this.toggleShow} />
+          <label>Show Password</label>
+        </div>
         <input type="submit" value="Login" />
       </form>
     );

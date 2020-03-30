@@ -56,14 +56,16 @@ export default class SignupForm extends React.Component {
         <input type="text" name="first_name" />
         <label htmlFor="last_name">Last Name:</label>
         <input type="text" name="last_name" />
+        <label htmlFor="zip_code">ZIP Code:</label>
+        <input type="text" name="zip_code" />
         <label htmlFor="user_email">Email Address:</label>
         <input type="email" name="user_email" />
         <label htmlFor="password">Password:</label>
         <input type={this.state.hidden ? "password" : "text"} name="password" />
-        <input type="checkbox" onChange={this.toggleShow} />
-        <label>Show Password</label>
-        <label htmlFor="zip_code">ZIP Code:</label>
-        <input type="text" name="zip_code" />
+        <div>
+          <input type="checkbox" onChange={this.toggleShow} />
+          <label>Show Password</label>
+        </div>
         <input type="submit" value="Create Account" />
       </form>
     );

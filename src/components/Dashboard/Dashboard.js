@@ -12,7 +12,9 @@ export default class Dashboard extends React.Component {
     this.state = {
       store: store,
       currentWeather: null,
-      forecastWeather: "",
+      forecastWeather: null,
+      arrivals: null,
+      departures: null,
       events: null
     };
   }
@@ -29,15 +31,18 @@ export default class Dashboard extends React.Component {
       this.setState({
         currentWeather: store.currentWeather,
         forecastWeather: store.forecastWeather,
+        arrivals: store.arrivals,
+        departures: store.departures,
         events: store.events
       });
     } else {
       UserApiService.getUserDashboard(user_id).then(response => {
-        // console.log(response.data[2].events.event);
         this.setState({
           currentWeather: response.data[0],
           forecastWeather: response.data[1],
-          events: response.data[2].events
+          arrivals: response.data[2].arrivals,
+          departures: response.data[3].departures,
+          events: response.data[4].events
         });
       });
     }
@@ -53,10 +58,12 @@ export default class Dashboard extends React.Component {
             forecastWeather={this.state.forecastWeather}
           />
         )}
-        <Airline
-          arrivals={this.state.store.arrivals}
-          departures={this.state.store.departures}
-        />
+        {this.state.arrivals && this.state.departures && (
+          <Airline
+            arrivals={this.state.arrivals}
+            departures={this.state.departures}
+          />
+        )}
         {this.state.events && <Events events={this.state.events} />}
       </div>
     );
