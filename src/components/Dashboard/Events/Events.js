@@ -1,9 +1,9 @@
 import React from "react";
+import { convertDate } from "../../../app-helpers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default class Events extends React.Component {
-  //Find event stock image
   render() {
     const events = this.props.events.event;
     return (
@@ -27,7 +27,7 @@ export default class Events extends React.Component {
               <a href={e.url} target="_blank" rel="noopener noreferrer">
                 {e.title}
               </a>
-              <p>{new Date(e.start_time).toLocaleTimeString()}</p>
+              <p>{convertDate(e.start_time)}</p>
               <a
                 href={`http://maps.google.com/?q=${e.venue_name}`}
                 target="_blank"

@@ -10,7 +10,10 @@ export default class Dashboard extends React.Component {
   constructor() {
     super();
     this.state = {
-      store: store
+      store: store,
+      currentWeather: null,
+      forecastWeather: "",
+      events: null
     };
   }
 
@@ -20,30 +23,41 @@ export default class Dashboard extends React.Component {
     }
   };
 
-  //is just using return here ok?
   componentDidMount() {
     const user_id = TokenService.getUserId();
     if (user_id == null) {
-      return;
+      this.setState({
+        currentWeather: store.currentWeather,
+        forecastWeather: store.forecastWeather,
+        events: store.events
+      });
     } else {
-      UserApiService.getUserDashboard(user_id).then(response =>
-        console.log(response)
-      );
+      UserApiService.getUserDashboard(user_id).then(response => {
+        // console.log(response.data[2].events.event);
+        this.setState({
+          currentWeather: response.data[0],
+          forecastWeather: response.data[1],
+          events: response.data[2].events
+        });
+      });
     }
   }
 
   render() {
     return (
       <div>
-        <Weather
-          currentWeather={this.state.store.currentWeather}
-          forecastWeather={this.state.store.forecastWeather}
-        />
+        <h3>Insert Location Here</h3>
+        {this.state.currentWeather && (
+          <Weather
+            currentWeather={this.state.currentWeather}
+            forecastWeather={this.state.forecastWeather}
+          />
+        )}
         <Airline
           arrivals={this.state.store.arrivals}
           departures={this.state.store.departures}
         />
-        <Events events={this.state.store.events} />
+        {this.state.events && <Events events={this.state.events} />}
       </div>
     );
   }
