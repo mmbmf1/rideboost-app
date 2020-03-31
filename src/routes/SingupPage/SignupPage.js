@@ -10,13 +10,13 @@ export default class SignupPage extends React.Component {
   };
 
   handleSignupSuccess = () => {
-    this.props.history.push("/demopage");
+    this.props.history.push("/login");
   };
 
   render() {
     return (
       <div className="signup-main">
-        <h3>Signup Form</h3> 
+        <h3>Signup Form</h3>
         <SignupForm onSignupSuccess={this.handleSignupSuccess} />
         {/* <div>
           <p>Already Have an Account?</p>
