@@ -1,5 +1,5 @@
 import React from "react";
-import ValidatioError from "../../Utils/ValidationError";
+import ValidatioError from "../../utils/ValidationError";
 import AuthApiService from "../../services/auth-api-service";
 
 export default class SignupForm extends React.Component {
