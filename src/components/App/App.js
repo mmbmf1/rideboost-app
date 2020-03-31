@@ -9,6 +9,8 @@ import DemoPage from "../../routes/DemoPage/DemoPage";
 import UserDashboard from "../../routes/UserDashboard/UserDashboard";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import Footer from "../Footer/Footer";
+import PublicRoute from "../../utils/PublicRoute";
+import PrivateRoute from "../../utils/PrivateRoute";
 import Content from "../../content";
 import TokenService from "../../services/token-service";
 
@@ -35,10 +37,14 @@ export default class App extends React.Component {
         <Header content={content} />
         <Switch>
           <Route exact path={"/"} component={LandingPage} />
-          <Route exact path={"/signup"} component={SignupPage} />
-          <Route exact path={"/login"} component={LoginPage} />
-          <Route exact path={"/demopage"} component={DemoPage} />
-          <Route exact path={"/dashboard/:user_id"} component={UserDashboard} />
+          <PublicRoute exact path={"/signup"} component={SignupPage} />
+          <PublicRoute exact path={"/login"} component={LoginPage} />
+          <PublicRoute exact path={"/demopage"} component={DemoPage} />
+          <PrivateRoute
+            exact
+            path={"/dashboard/:user_id"}
+            component={UserDashboard}
+          />
           <Route component={NotFoundPage} />
         </Switch>
         <Footer content={content} />
