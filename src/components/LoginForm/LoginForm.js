@@ -1,6 +1,6 @@
 import React from "react";
 import RideBoostContext from "../../contexts/RideBoostContext";
-import ValidationError from "../../utils/ValidationError";
+import ValidationError from "../../Utils/ValidationError";
 import TokenService from "../../services/token-service";
 import AuthApiService from "../../services/auth-api-service";
 
