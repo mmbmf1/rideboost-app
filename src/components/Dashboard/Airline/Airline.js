@@ -14,7 +14,7 @@ export default class Airline extends React.Component {
       <div className="airline-container">
         <div className="dashboard-header">
           <FontAwesomeIcon icon={faPlaneArrival} />
-          <h3>MCI</h3>
+          <h3>{this.props.iata}</h3>
         </div>
         <table>
           <thead>
@@ -42,7 +42,7 @@ export default class Airline extends React.Component {
         </table>
         <div className="dashboard-header">
           <FontAwesomeIcon icon={faPlaneDeparture} />
-          <h3>MCI</h3>
+          <h3>{this.props.iata}</h3>
         </div>
         <table>
           <thead>

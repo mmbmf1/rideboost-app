@@ -12,6 +12,7 @@ export default class Dashboard extends React.Component {
     this.state = {
       store: store,
       location: "Kansas City",
+      iata: "MCI",
       currentWeather: null,
       forecastWeather: null,
       arrivals: null,
@@ -38,14 +39,15 @@ export default class Dashboard extends React.Component {
       });
     } else {
       UserApiService.getUserDashboard(user_id).then(response => {
-        console.log(response.data[2].arrivals);
+        console.log(response.data);
         this.setState({
           currentWeather: response.data[0],
           forecastWeather: response.data[1],
           arrivals: response.data[2].arrivals,
           departures: response.data[2].departures,
           events: response.data[3].events,
-          location: response.data[4].city
+          location: response.data[4].city,
+          iata: response.data[5]
         });
       });
     }
@@ -61,13 +63,12 @@ export default class Dashboard extends React.Component {
             forecastWeather={this.state.forecastWeather}
           />
         )}
-        {this.state.arrivals && this.state.departures ? (
+        {this.state.arrivals && this.state.departures && (
           <Airline
             arrivals={this.state.arrivals}
             departures={this.state.departures}
+            iata={this.state.iata}
           />
-        ) : (
-          "Aiport information not available"
         )}
         {this.state.events && <Events events={this.state.events} />}
       </div>

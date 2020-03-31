@@ -1,9 +1,11 @@
 import React from "react";
 import ValidatioError from "../../utils/ValidationError";
+import RideBoostContext from "../../contexts/RideBoostContext";
 import AuthApiService from "../../services/auth-api-service";
-import AirportOptions from "./AirportOptions/AirportOptions";
+// import AirportOptions from "./AirportOptions/AirportOptions";
 
 export default class SignupForm extends React.Component {
+  static contextType = RideBoostContext;
   constructor() {
     super();
     this.state = {
@@ -24,7 +26,14 @@ export default class SignupForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { first_name, last_name, user_email, password, zip_code } = e.target;
+    const {
+      first_name,
+      last_name,
+      user_email,
+      password,
+      zip_code,
+      airport
+    } = e.target;
 
     this.setState({ error: null });
 
@@ -33,7 +42,8 @@ export default class SignupForm extends React.Component {
       last_name: last_name.value,
       user_email: user_email.value,
       password: password.value,
-      zip_code: zip_code.value
+      zip_code: zip_code.value,
+      icao: airport.value
     })
       .then(user => {
         first_name.value = "";
@@ -41,6 +51,7 @@ export default class SignupForm extends React.Component {
         user_email.value = "";
         password.value = "";
         zip_code.value = "";
+        airport.value = "";
         this.props.onSignupSuccess();
       })
       .catch(res => {
@@ -50,6 +61,7 @@ export default class SignupForm extends React.Component {
 
   render() {
     const error = this.state.error;
+    const airports = this.context.airports;
     return (
       <form className="registration-form" onSubmit={e => this.handleSubmit(e)}>
         <ValidatioError message={error} />
@@ -59,7 +71,18 @@ export default class SignupForm extends React.Component {
         <input type="text" name="last_name" />
         <label htmlFor="zip_code">ZIP Code:</label>
         <input type="text" name="zip_code" />
-        <AirportOptions />
+        <div>
+          <label htmlFor="airports">Choose a home airport:</label>
+          <input type="text" name="airport" list="airport" />
+          <datalist id="airport" name="airport">
+            {airports.map((airport, index) => (
+              <option key={index} value={airport.ICAO}>
+                {airport.Airport === null ? "" : airport.Airport}
+              </option>
+            ))}
+          </datalist>
+        </div>
+
         <label htmlFor="user_email">Email Address:</label>
         <input type="email" name="user_email" />
         <label htmlFor="password">Password:</label>
