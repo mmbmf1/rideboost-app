@@ -12,6 +12,7 @@ import Footer from "../Footer/Footer";
 import PublicRoute from "../../utils/PublicRoute";
 import PrivateRoute from "../../utils/PrivateRoute";
 import Content from "../../content";
+import airports from "../../airport_store";
 import TokenService from "../../services/token-service";
 
 export default class App extends React.Component {
@@ -21,6 +22,7 @@ export default class App extends React.Component {
     super();
     this.state = {
       content: Content,
+      airports: airports,
       loggedIn: false,
       setLoggedIn: loggedIn => this.setState({ loggedIn })
     };

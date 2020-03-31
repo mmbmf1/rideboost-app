@@ -1,6 +1,7 @@
 import React from "react";
 import ValidatioError from "../../utils/ValidationError";
 import AuthApiService from "../../services/auth-api-service";
+import AirportOptions from "./AirportOptions/AirportOptions";
 
 export default class SignupForm extends React.Component {
   constructor() {
@@ -58,6 +59,7 @@ export default class SignupForm extends React.Component {
         <input type="text" name="last_name" />
         <label htmlFor="zip_code">ZIP Code:</label>
         <input type="text" name="zip_code" />
+        <AirportOptions />
         <label htmlFor="user_email">Email Address:</label>
         <input type="email" name="user_email" />
         <label htmlFor="password">Password:</label>

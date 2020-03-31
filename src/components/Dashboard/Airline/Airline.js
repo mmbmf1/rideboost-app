@@ -7,8 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default class Airline extends React.Component {
-  //Move arrivals departures into components?
-  //Lookup airport name by location - API
   render() {
     const arrivals = this.props.arrivals;
     const departures = this.props.departures;
