@@ -70,7 +70,12 @@ export default class SignupForm extends React.Component {
         <label htmlFor="last_name">Last Name:</label>
         <input type="text" name="last_name" />
         <label htmlFor="zip_code">ZIP Code:</label>
-        <input type="text" name="zip_code" />
+        <input
+          type="text"
+          pattern="[0-9]{5}"
+          name="zip_code"
+          placeholder="5 digit ZIP code"
+        />
         <div>
           <label htmlFor="airports">Choose a home airport:</label>
           <input type="text" name="airport" list="airport" />
