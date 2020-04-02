@@ -15,7 +15,11 @@ export default class Airline extends React.Component {
         <div className="dashboard-header">
           <FontAwesomeIcon icon={faPlaneArrival} />
           <h3>{this.props.iata}</h3>
+          <p>
+            {this.props.currentDate} - {this.props.futureDate}
+          </p>
         </div>
+        <h4>{this.props.arrivals.length} Flights Arriving:</h4>
         <table>
           <thead>
             <tr>
@@ -43,7 +47,12 @@ export default class Airline extends React.Component {
         <div className="dashboard-header">
           <FontAwesomeIcon icon={faPlaneDeparture} />
           <h3>{this.props.iata}</h3>
+          <p>
+            {this.props.currentDate} - {this.props.futureDate}
+          </p>
         </div>
+        <h4>{this.props.departures.length} Flights Departing:</h4>
+
         <table>
           <thead>
             <tr>

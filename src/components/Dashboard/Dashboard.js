@@ -5,6 +5,7 @@ import Airline from "./Airline/Airline";
 import store from "../../store";
 import UserApiService from "../../services/user-api-service";
 import TokenService from "../../services/token-service";
+import { convertDate } from "../../app-helpers";
 
 export default class Dashboard extends React.Component {
   constructor() {
@@ -13,6 +14,8 @@ export default class Dashboard extends React.Component {
       store: store,
       location: "Kansas City",
       iata: "MCI",
+      currentDate: "",
+      futureDate: "",
       currentWeather: null,
       forecastWeather: null,
       arrivals: null,
@@ -39,6 +42,7 @@ export default class Dashboard extends React.Component {
       });
     } else {
       UserApiService.getUserDashboard(user_id).then(response => {
+        console.log(response.data[2].arrivals);
         this.setState({
           currentWeather: response.data[0],
           forecastWeather: response.data[1],
@@ -46,7 +50,9 @@ export default class Dashboard extends React.Component {
           departures: response.data[2].departures,
           events: response.data[3].events,
           location: response.data[4].city,
-          iata: response.data[5]
+          iata: response.data[5],
+          currentDate: convertDate(response.data[6]),
+          futureDate: convertDate(response.data[7])
         });
       });
     }
@@ -67,6 +73,8 @@ export default class Dashboard extends React.Component {
             arrivals={this.state.arrivals}
             departures={this.state.departures}
             iata={this.state.iata}
+            currentDate={this.state.currentDate}
+            futureDate={this.state.futureDate}
           />
         )}
         {this.state.events && <Events events={this.state.events} />}

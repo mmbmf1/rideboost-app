@@ -15,6 +15,7 @@ export default class Events extends React.Component {
         <div className="dashboard-header">
           <FontAwesomeIcon icon={faCalendarAlt} />
           <h3>Upcoming Events</h3>
+          <p>{new Date().toLocaleDateString()}</p>
         </div>
         {events.map((e, index) => (
           <div key={index} className="event">

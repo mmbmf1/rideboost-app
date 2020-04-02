@@ -126,11 +126,14 @@
   .dashboard-header {
     display: flex;
     align-items: baseline;
-    /* justify-content: space-between; */
   }
 
   .dashboard-header h3 {
     margin-right: 10px;
+  }
+
+  .airline-container h4 {
+    margin-top: 0;
   }
 
   table {
