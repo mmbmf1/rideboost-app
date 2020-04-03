@@ -28,7 +28,6 @@
 
   nav {
     margin-bottom: 10px;
-    background-color: lightgray;
     display: flex;
   }
 
@@ -56,6 +55,17 @@
   #nav-right {
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  .form-header {
+    padding: 0 20px 0 20px;
+  }
+
+  /* .login-main {
+  } */
+
+  .signup-link {
+    text-align: center;
   }
 
   h1 {
@@ -182,7 +192,6 @@
     padding: 10px;
     text-align: center;
     font-size: 0.8em;
-    background-color: lightgrey;
   }
 
   footer a {

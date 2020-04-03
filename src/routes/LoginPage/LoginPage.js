@@ -9,8 +9,8 @@ export default class LoginPage extends React.Component {
 
   static defaultProps = {
     history: {
-      push: () => {}
-    }
+      push: () => {},
+    },
   };
 
   handleLoginSuccess = () => {
@@ -21,8 +21,10 @@ export default class LoginPage extends React.Component {
   render() {
     return (
       <div className="login-main">
-        <h3>Login Form</h3>
-        <p>Login to access your dashboard</p>
+        <div className="form-header">
+          <h3>Login Form</h3>
+          <p>Login to access your dashboard</p>
+        </div>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
         <div className="signup-link">
           <p>
