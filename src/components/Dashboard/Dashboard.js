@@ -42,14 +42,14 @@ export default class Dashboard extends React.Component {
       });
     } else {
       UserApiService.getUserDashboard(user_id).then(response => {
-        console.log(response.data[2].arrivals);
+        // console.log(response.data[2].arrivals);
         this.setState({
+          location: response.data[4].city,
           currentWeather: response.data[0],
           forecastWeather: response.data[1],
           arrivals: response.data[2].arrivals,
           departures: response.data[2].departures,
           events: response.data[3].events,
-          location: response.data[4].city,
           iata: response.data[5],
           currentDate: convertDate(response.data[6]),
           futureDate: convertDate(response.data[7])
