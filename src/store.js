@@ -328,8 +328,6 @@ const store = {
     ]
   },
 
-  //may need to make 2 API calls for weather: currentWeather (displays current), forecastWeather(displays 3 hr intervals)
-
   currentWeather: {
     coord: {
       lon: -94.58,
