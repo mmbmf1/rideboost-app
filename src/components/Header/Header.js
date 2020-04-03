@@ -15,13 +15,13 @@ export default class Header extends React.Component {
   };
 
   renderLogoutLink() {
-    const user_id = TokenService.getUserId();
+    // const user_id = TokenService.getUserId();
     return (
       <div id="nav-right">
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
-        <Link to={`/dashboard/${user_id}`}>Dashboard</Link>
+        {/* <Link to={`/dashboard/${user_id}`}>Dashboard</Link> */}
       </div>
     );
   }

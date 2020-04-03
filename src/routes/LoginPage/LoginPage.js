@@ -21,14 +21,13 @@ export default class LoginPage extends React.Component {
   render() {
     return (
       <div className="login-main">
-        <div className="form-header">
-          <h3>Login Form</h3>
-          <p>Login to access your dashboard</p>
-        </div>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
         <div className="signup-link">
           <p>
-            Don't Have an Account? <Link to={"/signup"}>Signup!</Link>
+            Don't Have an Account?{" "}
+            <span className="bold-link">
+              <Link to={"/signup"}>Signup</Link>
+            </span>
           </p>
         </div>
       </div>

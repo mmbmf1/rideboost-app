@@ -10,21 +10,21 @@ export default class SignupForm extends React.Component {
     super();
     this.state = {
       error: "",
-      hidden: true
+      hidden: true,
     };
   }
 
   static defaultProps = {
-    onSignupSuccess: () => {}
+    onSignupSuccess: () => {},
   };
 
   toggleShow = () => {
-    this.setState(prevState => ({
-      hidden: !prevState.hidden
+    this.setState((prevState) => ({
+      hidden: !prevState.hidden,
     }));
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const {
       first_name,
@@ -32,7 +32,7 @@ export default class SignupForm extends React.Component {
       user_email,
       password,
       zip_code,
-      airport
+      airport,
     } = e.target;
 
     this.setState({ error: null });
@@ -43,9 +43,9 @@ export default class SignupForm extends React.Component {
       user_email: user_email.value,
       password: password.value,
       zip_code: zip_code.value,
-      icao: airport.value
+      icao: airport.value,
     })
-      .then(user => {
+      .then((user) => {
         first_name.value = "";
         last_name.value = "";
         user_email.value = "";
@@ -54,7 +54,7 @@ export default class SignupForm extends React.Component {
         airport.value = "";
         this.props.onSignupSuccess();
       })
-      .catch(res => {
+      .catch((res) => {
         this.setState({ error: res.error });
       });
   };
@@ -63,13 +63,16 @@ export default class SignupForm extends React.Component {
     const error = this.state.error;
     const airports = this.context.airports;
     return (
-      <form className="registration-form" onSubmit={e => this.handleSubmit(e)}>
+      <form
+        className="registration-form"
+        onSubmit={(e) => this.handleSubmit(e)}
+      >
         <ValidatioError message={error} />
-        <label htmlFor="first_name">First Name:</label>
-        <input type="text" name="first_name" />
-        <label htmlFor="last_name">Last Name:</label>
-        <input type="text" name="last_name" />
-        <label htmlFor="zip_code">ZIP Code:</label>
+        <label htmlFor="first_name"></label>
+        <input type="text" name="first_name" placeholder="First Name" />
+        <label htmlFor="last_name"></label>
+        <input type="text" name="last_name" placeholder="Last Name" />
+        <label htmlFor="zip_code"></label>
         <input
           type="text"
           pattern="[0-9]{5}"
@@ -77,8 +80,13 @@ export default class SignupForm extends React.Component {
           placeholder="5 digit ZIP code"
         />
         <div>
-          <label htmlFor="airports">Choose a home airport:</label>
-          <input type="text" name="airport" list="airport" />
+          <label htmlFor="airports"></label>
+          <input
+            type="text"
+            name="airport"
+            list="airport"
+            placeholder="Choose a home airport"
+          />
           <datalist id="airport" name="airport">
             {airports.map((airport, index) => (
               <option key={index} value={airport.ICAO}>
@@ -88,11 +96,16 @@ export default class SignupForm extends React.Component {
           </datalist>
         </div>
 
-        <label htmlFor="user_email">Email Address:</label>
-        <input type="email" name="user_email" />
-        <label htmlFor="password">Password:</label>
-        <input type={this.state.hidden ? "password" : "text"} name="password" />
-        <div>
+        <label htmlFor="user_email"></label>
+        <input type="email" name="user_email" placeholder="Email" />
+        <label htmlFor="password"></label>
+        <input
+          type={this.state.hidden ? "password" : "text"}
+          name="password"
+          placeholder="Password"
+          autoComplete="new-password"
+        />
+        <div className="show-container">
           <input type="checkbox" onChange={this.toggleShow} />
           <label>Show Password</label>
         </div>

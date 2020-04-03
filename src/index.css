@@ -15,11 +15,11 @@
   }
 
   a {
-    text-decoration: blue;
+    text-decoration: #195faa;
   }
 
   a:visited {
-    color: blue;
+    color: #195faa;
   }
 
   ul {
@@ -27,7 +27,8 @@
   }
 
   nav {
-    margin-bottom: 10px;
+    margin: 15px 0 10px 0;
+    padding-left: 20px;
     display: flex;
   }
 
@@ -36,7 +37,6 @@
     display: flex;
     flex-direction: row;
     width: 50%;
-    font-size: 0.8em;
     font-family: "Baloo", cursive;
   }
 
@@ -44,8 +44,12 @@
     margin-right: 5px;
   }
 
-  #nav-left {
-    padding-left: 10px;
+  .fa-taxi {
+    margin-right: 2px;
+  }
+
+  #nav-right {
+    padding-right: 20px;
   }
 
   svg {
@@ -57,15 +61,92 @@
     justify-content: space-evenly;
   }
 
-  .form-header {
-    padding: 0 20px 0 20px;
+  .login-main {
+    margin-top: 25%;
   }
 
-  /* .login-main {
+  .signup-main {
+    margin-top: 15%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  input:-webkit-autofill {
+    box-shadow: 0 0 0 30px white inset;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    letter-spacing: 1.4px;
+    border-bottom: 1px solid lightgrey;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #195faa;
+  }
+
+  input[type="email"],
+  input[type="text"] {
+    margin-bottom: 15px;
+  }
+
+  input[type="submit"] {
+    width: 75%;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    border: none;
+    background-color: #195faa;
+    color: white;
+    font-weight: bold;
+    letter-spacing: unset;
+  }
+
+  /* input[type="submit"]:hover {
+    background-color: #f4511e;
   } */
 
+  .form-header {
+    padding-bottom: 20px;
+    font-size: 0.8em;
+    color: red;
+  }
+
+  .show-container {
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+    margin-bottom: 30px;
+  }
+
+  input[type="checkbox"] {
+    width: unset;
+    margin: 10px 5px 10px 0;
+  }
+
   .signup-link {
+    margin: 30px 0;
     text-align: center;
+    font-size: 0.8em;
+  }
+
+  .bold-link {
+    display: block;
+    font-weight: bolder;
+    margin: 10px;
   }
 
   h1 {
@@ -92,21 +173,6 @@
   button {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  input {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  input[type="checkbox"] {
-    width: unset;
   }
 
   .weather-container,
@@ -189,12 +255,22 @@
   }
 
   footer {
+    margin: 60px 0 10px 0;
     padding: 10px;
     text-align: center;
-    font-size: 0.8em;
   }
 
   footer a {
-    margin-right: 5px;
+    margin: 0 5px;
+    font-size: 1.5em;
+  }
+
+  .footer-cr {
+    padding-top: 10px;
+    font-size: 0.75em;
+  }
+
+  .footer-cr p {
+    margin: 5px 0;
   }
 }
