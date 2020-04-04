@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarAlt,
   faClock,
-  faMapMarkerAlt
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default class Events extends React.Component {
@@ -14,7 +14,7 @@ export default class Events extends React.Component {
       <div className="events-container">
         <div className="dashboard-header">
           <FontAwesomeIcon icon={faCalendarAlt} />
-          <h3>Upcoming Events</h3>
+          <h3>Events</h3>
           <p>{new Date().toLocaleDateString()}</p>
         </div>
         {events.map((e, index) => (

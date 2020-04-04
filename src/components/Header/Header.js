@@ -17,7 +17,7 @@ export default class Header extends React.Component {
   renderLogoutLink() {
     // const user_id = TokenService.getUserId();
     return (
-      <div id="nav-right">
+      <div id="nav-right-logout">
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>

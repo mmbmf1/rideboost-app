@@ -14,20 +14,20 @@ export default class Dashboard extends React.Component {
       store: store,
       location: "Kansas City",
       iata: "MCI",
-      currentDate: "",
-      futureDate: "",
+      currentDate: "12:00 PM",
+      futureDate: "1:00 PM",
       currentWeather: null,
       forecastWeather: null,
       arrivals: null,
       departures: null,
-      events: null
+      events: null,
     };
   }
 
   static defaultProps = {
     history: {
-      push: () => {}
-    }
+      push: () => {},
+    },
   };
 
   componentDidMount() {
@@ -38,11 +38,11 @@ export default class Dashboard extends React.Component {
         forecastWeather: store.forecastWeather,
         arrivals: store.arrivals,
         departures: store.departures,
-        events: store.events
+        events: store.events,
       });
     } else {
-      UserApiService.getUserDashboard(user_id).then(response => {
-        // console.log(response.data[2].arrivals);
+      UserApiService.getUserDashboard(user_id).then((response) => {
+        console.log(response.data[6], response.data[7]);
         this.setState({
           location: response.data[4].city,
           currentWeather: response.data[0],
@@ -52,7 +52,7 @@ export default class Dashboard extends React.Component {
           events: response.data[3].events,
           iata: response.data[5],
           currentDate: convertDate(response.data[6]),
-          futureDate: convertDate(response.data[7])
+          futureDate: convertDate(response.data[7]),
         });
       });
     }
@@ -61,7 +61,7 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <h3>{this.state.location}</h3>
+        {/* <h3>{this.state.location}</h3> */}
         {this.state.currentWeather && (
           <Weather
             currentWeather={this.state.currentWeather}

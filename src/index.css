@@ -33,7 +33,8 @@
   }
 
   #nav-left,
-  #nav-right {
+  #nav-right,
+  #nav-right-logout {
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -48,10 +49,6 @@
     margin-right: 2px;
   }
 
-  #nav-right {
-    padding-right: 20px;
-  }
-
   svg {
     margin-right: 10px;
   }
@@ -59,6 +56,12 @@
   #nav-right {
     align-items: center;
     justify-content: space-evenly;
+    /* padding-right: 20px; */
+  }
+
+  #nav-right-logout {
+    justify-content: flex-end;
+    padding-right: 20px;
   }
 
   .login-main {
@@ -176,9 +179,13 @@
   }
 
   .weather-container,
-  .airline-container,
+  .arrival-container,
+  .departure-container,
   .events-container {
-    margin: 0 30px;
+    margin: 15px 10px 0 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #195faa;
   }
 
   .weather-container {
@@ -189,6 +196,10 @@
     display: flex;
     justify-content: space-evenly;
     padding: 0;
+  }
+
+  ul {
+    margin: 0;
   }
 
   li img {
@@ -202,10 +213,23 @@
   .dashboard-header {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .dashboard-header .fa-w-20 {
+    flex: 1;
+  }
+
+  .dashboard-header p {
+    font-size: 0.8em;
+    flex: 8;
   }
 
   .dashboard-header h3 {
     margin-right: 10px;
+    flex: 2;
   }
 
   .airline-container h4 {
