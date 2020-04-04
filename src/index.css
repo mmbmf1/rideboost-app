@@ -19,8 +19,8 @@
   }
 
   a:visited {
-    color: #195faa;
-    /* color: white; */
+    /* color: #195faa; */
+    color: white;
   }
 
   ul {
