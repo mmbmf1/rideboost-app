@@ -15,13 +15,13 @@ export default class Header extends React.Component {
   };
 
   renderLogoutLink() {
-    // const user_id = TokenService.getUserId();
+    const user_id = TokenService.getUserId();
     return (
       <div id="nav-right-logout">
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
-        {/* <Link to={`/dashboard/${user_id}`}>Dashboard</Link> */}
+        <Link to={`/dashboard/${user_id}`}>Dashboard</Link>
       </div>
     );
   }
@@ -48,11 +48,6 @@ export default class Header extends React.Component {
         {this.context.loggedIn
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
-        {/* <div id="nav-right">
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/demopage">Demo</Link>
-        </div> */}
       </nav>
     );
   }

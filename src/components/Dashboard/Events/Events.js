@@ -29,8 +29,7 @@ export default class Events extends React.Component {
     return (
       <div className="events-container">
         <div className="dashboard-header-events">
-          <FontAwesomeIcon icon={faCalendarAlt} />
-          {/* <h3>Events</h3> */}
+          <FontAwesomeIcon icon={faCalendarAlt} className="calendar-header" />
           <p>{new Date().toLocaleDateString()}</p>
           <h4>{this.props.location}</h4>
           <FontAwesomeIcon
@@ -71,7 +70,6 @@ export default class Events extends React.Component {
             </div>
           ))}
         </div>
-        {/* <div>{events.length}</div> */}
       </div>
     );
   }
