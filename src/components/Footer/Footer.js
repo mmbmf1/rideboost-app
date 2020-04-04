@@ -5,7 +5,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <footer>
-      <div>
+      <div className="footer-icons">
         <a
           href="https://github.com/mmbmf1"
           target="_blank"

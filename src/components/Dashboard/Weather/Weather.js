@@ -21,12 +21,10 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />{" "}
             <p>{currentWeather.name}</p>
-            <div>
-              <p>
-                {convertTemp(currentWeather.main.temp)}
-                {"\xB0"}F
-              </p>
-            </div>
+            <p className="temp-display">
+              {convertTemp(currentWeather.main.temp)}
+              {"\xB0"}F
+            </p>
           </li>
           <li>
             <img
@@ -35,7 +33,7 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>{convertDate(forecastWeather.list[0].dt_txt)}</p>
-            <p>
+            <p className="temp-display">
               {convertTemp(forecastWeather.list[0].main.temp)}
               {"\xB0"}F
             </p>
@@ -47,7 +45,7 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>{convertDate(forecastWeather.list[1].dt_txt)}</p>
-            <p>
+            <p className="temp-display">
               {convertTemp(forecastWeather.list[1].main.temp)}
               {"\xB0"}F
             </p>
@@ -59,7 +57,7 @@ export default class Weather extends React.Component {
               className="weather-icon"
             />
             <p>{convertDate(forecastWeather.list[2].dt_txt)}</p>
-            <p>
+            <p className="temp-display">
               {convertTemp(forecastWeather.list[2].main.temp)}
               {"\xB0"}F
             </p>

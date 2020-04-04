@@ -60,7 +60,7 @@ export default class Dashboard extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="dashboard-main">
         {/* <h3>{this.state.location}</h3> */}
         {this.state.currentWeather && (
           <Weather
@@ -77,7 +77,9 @@ export default class Dashboard extends React.Component {
             futureDate={this.state.futureDate}
           />
         )}
-        {this.state.events && <Events events={this.state.events} />}
+        {this.state.events && (
+          <Events events={this.state.events} location={this.state.location} />
+        )}
       </div>
     );
   }
