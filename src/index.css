@@ -617,6 +617,10 @@
     margin-right: auto;
     margin-left: auto;
   }
+
+  .loader {
+    margin-top: 25%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -640,5 +644,9 @@
 
   .dashboard-main {
     min-width: 800px;
+  }
+
+  .loader {
+    margin-top: 20%;
   }
 }
