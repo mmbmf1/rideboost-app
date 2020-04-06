@@ -105,6 +105,13 @@
     color: #ff4e40;
   }
 
+  .hero-icon {
+    font-size: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #195faa;
+  }
+
   .section-one h3 {
     margin-top: 0;
     padding: 0 30px;
@@ -115,6 +122,11 @@
     padding: 0 30px;
     margin-bottom: 40px;
     font-size: small;
+  }
+
+  .section-two,
+  .section-three {
+    border-bottom: 1px solid lightgrey;
   }
 
   .section-two h1,
@@ -157,7 +169,6 @@
   .main-section p {
     margin-top: 0;
     padding: 0 40px 60px 40px;
-    border-bottom: 1px solid lightgrey;
   }
 
   button {
@@ -208,7 +219,7 @@
   button.btn .circle .icon.arrow::before {
     position: absolute;
     content: "";
-    top: -0.25rem;
+    top: -0.3rem;
     right: 0.0625rem;
     width: 0.625rem;
     height: 0.625rem;
@@ -220,6 +231,7 @@
   button.btn .button-text {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -297,10 +309,6 @@
     letter-spacing: unset;
   }
 
-  /* input[type="submit"]:hover {
-    background-color: #f4511e;
-  } */
-
   .form-header {
     padding-bottom: 20px;
     font-size: 0.8em;
@@ -360,7 +368,7 @@
     border-top: 16px solid #195faa;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
   }
 
@@ -427,10 +435,19 @@
 
   .dashboard-header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     border-bottom: 1px solid lightgrey;
+  }
+
+  .fa-plane-arrival,
+  .fa-plane-departure {
+    color: #268fff;
+  }
+
+  .fa-calendar-alt {
+    color: #9eb312;
   }
 
   .dashboard-header-events {
@@ -478,6 +495,7 @@
 
   .airline-container h4 {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   table {
@@ -561,5 +579,66 @@
   .footer-cr p {
     margin: 5px 0;
     color: white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #nav-right {
+    justify-content: flex-end;
+  }
+
+  #nav-right a {
+    padding: 0 20px;
+  }
+
+  .section-two,
+  .section-three,
+  .section-four {
+    padding: 0 160px;
+  }
+
+  .login-main {
+    width: 600px;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signup-main {
+    width: 600px;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dashboard-main {
+    width: 600px;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin-top: 10%;
+  }
+
+  .section-two,
+  .section-three,
+  .section-four {
+    padding: 0 340px;
+  }
+
+  .login-main {
+    margin-top: 15%;
+  }
+
+  .signup-main {
+    margin-top: 15%;
+  }
+
+  .dashboard-main {
+    min-width: 800px;
   }
 }

@@ -44,7 +44,6 @@ export default class Dashboard extends React.Component {
       });
     } else {
       UserApiService.getUserDashboard(user_id).then((response) => {
-        console.log(response.data[6], response.data[7]);
         this.setState({
           location: response.data[4].city,
           currentWeather: response.data[0],
@@ -69,7 +68,6 @@ export default class Dashboard extends React.Component {
       </div>
     ) : (
       <div className="dashboard-main">
-        {/* <h3>{this.state.location}</h3> */}
         {this.state.currentWeather && (
           <Weather
             currentWeather={this.state.currentWeather}

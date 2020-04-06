@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCloudSunRain,
   faPlane,
-  // faCalendar,
   faCalendarWeek,
+  faTaxi,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default class LandingPage extends React.Component {
@@ -18,6 +18,7 @@ export default class LandingPage extends React.Component {
       <main role="main" className="landing-page">
         <div className="main-wrapper">
           <section className="section-one main-section">
+            <FontAwesomeIcon icon={faTaxi} className="hero-icon" />
             <h1>{content.title}</h1>
             <h3>{content.hero}</h3>
             <div>{content.heroContent}</div>
@@ -31,19 +32,16 @@ export default class LandingPage extends React.Component {
             </button>
           </section>
           <section className="section-two main-section">
-            {/* <img src={content.sectionOneScreenshot} alt="app screenshot" /> */}
             <FontAwesomeIcon icon={faCloudSunRain} />
             <h1>{content.sectionOneTitle}</h1>
             <p>{content.sectionOneContent}</p>
           </section>
           <section className="section-three main-section">
-            {/* <img src={content.sectionTwoScreenshot} alt="app screenshot" /> */}
             <FontAwesomeIcon icon={faPlane} />
             <h1>{content.sectionTwoTitle}</h1>
             <p>{content.sectionTwoContent}</p>
           </section>
           <section className="section-four main-section">
-            {/* <img src={content.sectionThreeScreenshot} alt="app screenshot" /> */}
             <FontAwesomeIcon icon={faCalendarWeek} />
             <h1>{content.sectionThreeTitle}</h1>
             <p>{content.sectionThreeContent}</p>

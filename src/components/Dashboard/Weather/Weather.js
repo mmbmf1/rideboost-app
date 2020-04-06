@@ -1,7 +1,5 @@
 import React from "react";
 import { convertTemp, convertDate } from "../../../app-helpers";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
 
 export default class Weather extends React.Component {
   render() {
@@ -9,10 +7,6 @@ export default class Weather extends React.Component {
     const forecastWeather = this.props.forecastWeather;
     return (
       <div className="weather-container">
-        {/* <div className="dashboard-header">
-          <FontAwesomeIcon icon={faCloudSunRain} />
-          <h3>Weather</h3>
-        </div> */}
         <ul>
           <li>
             <img

@@ -5,8 +5,8 @@ import SignupForm from "../../components/SignupForm/SignupForm";
 export default class SignupPage extends React.Component {
   static defaultProps = {
     history: {
-      push: () => {}
-    }
+      push: () => {},
+    },
   };
 
   handleSignupSuccess = () => {
@@ -17,10 +17,6 @@ export default class SignupPage extends React.Component {
     return (
       <div className="signup-main">
         <SignupForm onSignupSuccess={this.handleSignupSuccess} />
-        {/* <div>
-          <p>Already Have an Account?</p>
-          <Link to={"/login"}>Login</Link>
-        </div> */}
       </div>
     );
   }
