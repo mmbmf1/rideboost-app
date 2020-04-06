@@ -63,8 +63,9 @@ export default class Dashboard extends React.Component {
 
   render() {
     return this.state.loading ? (
-      <div className="dashboard-main">
-        <h1>Loading...</h1>
+      <div className="load-container">
+        <div className="loader"></div>
+        <p>Loading...</p>
       </div>
     ) : (
       <div className="dashboard-main">

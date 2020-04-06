@@ -1,16 +1,19 @@
 const content = {
   title: "Ride Boost",
-  hero: "Ride Boost Hero",
-  heroContent:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at.",
-  sectionOneTitle: "What Does the App Do?",
+  hero: "Rideshare Driver Assistant",
+  heroContent: "Locate riders. Increase your rides. Earn more money",
+  sectionOneTitle: "Real Time Weather",
   sectionOneContent:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Get real time weather data the extended forecast for you area.",
   sectionOneScreenshot: "[ placeholder ]",
-  sectionTwoTitle: "How Does the App Work?",
+  sectionTwoTitle: "Real Time Flight Data",
   sectionTwoContent:
-    "Ac turpis egestas sed tempus urna et pharetra pharetra massa. Sapien nec sagittis aliquam malesuada bibendum.",
-  sectionTwoScreenshot: "[ placeholder ]"
+    "See which flights are arriving and departing so you know when to be at the airport.",
+  sectionTwoScreenshot: "[ placeholder ]",
+  sectionThreeTitle: "Local Event Listings",
+  sectionThreeContent:
+    "Browse local concerts, sporting events and more to see when and where riders will be.",
+  sectionThreeScreenShot: "[ placeholder ]",
 };
 
 export default content;

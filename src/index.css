@@ -37,6 +37,7 @@
     display: flex;
     background-color: #195faa;
     padding-left: 10px;
+    z-index: 1;
   }
 
   #nav-left,
@@ -75,11 +76,13 @@
   #nav-right {
     align-items: center;
     justify-content: space-evenly;
+    font-size: smaller;
   }
 
   #nav-right-logout {
     justify-content: flex-end;
     padding-right: 20px;
+    font-size: smaller;
   }
 
   #nav-right-logout a {
@@ -95,18 +98,149 @@
     margin-bottom: 10%;
   }
 
+  .section-one h1 {
+    margin: 0;
+    font-size: 2.75em;
+    font-family: "Baloo", cursive;
+    color: #ff4e40;
+  }
+
+  .section-one h3 {
+    margin-top: 0;
+    padding: 0 30px;
+    color: #195faa;
+  }
+
+  .section-one div {
+    padding: 0 30px;
+    margin-bottom: 40px;
+    font-size: small;
+  }
+
+  .section-two h1,
+  .section-three h1,
+  .section-four h1 {
+    padding: 0 40px;
+    color: #195faa;
+  }
+
   .main-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-bottom: 40px;
     padding: 10px;
     text-align: center;
   }
 
+  .fa-calendar-week,
+  .fa-plane,
+  .fa-cloud-sun-rain {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 60px;
+  }
+
+  .fa-cloud-sun-rain {
+    color: #ff4e40;
+  }
+
+  .fa-plane {
+    color: #268fff;
+  }
+
+  .fa-calendar-week {
+    color: #9eb312;
+  }
+
+  .main-section p {
+    margin-top: 0;
+    padding: 0 40px 60px 40px;
+    border-bottom: 1px solid lightgrey;
+  }
+
   button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-family: "Baloo", cursive;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  button.btn {
+    width: 12rem;
+    height: auto;
+  }
+
+  button.btn .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #195faa;
+    border-radius: 4px;
+  }
+  button.btn .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  button.btn .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  button.btn .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  button.btn .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    font-weight: inherit;
+    line-height: 1.6;
+    text-align: center;
+    color: #195faa;
+    text-transform: uppercase;
+  }
+  button:hover .circle {
+    width: 100%;
+  }
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    -webkit-transform: translate(1rem, 0);
+    transform: translate(1rem, 0);
+  }
+  button:hover .button-text {
+    color: #fff;
   }
 
   .login-main {
@@ -114,7 +248,7 @@
   }
 
   .signup-main {
-    margin-top: 25%;
+    margin: 20% 0;
   }
 
   form {
@@ -151,8 +285,8 @@
   }
 
   input[type="submit"] {
-    width: 75%;
-    height: 25px;
+    width: 50%;
+    height: 2.5rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px;
@@ -197,17 +331,60 @@
     margin: 10px;
   }
 
-  h1 {
-    margin: 0;
-    font-family: "Baloo", cursive;
-  }
-
   .dashboard-main {
     margin-top: 20%;
     margin-bottom: 100px;
     padding: 1px 0 15px 0;
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .loader {
+    margin-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #195faa;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  .load-container p {
+    text-align: center;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .weather-container,
