@@ -21,6 +21,7 @@ export default class Dashboard extends React.Component {
       arrivals: null,
       departures: null,
       events: null,
+      loading: true,
     };
   }
 
@@ -39,6 +40,7 @@ export default class Dashboard extends React.Component {
         arrivals: store.arrivals,
         departures: store.departures,
         events: store.events,
+        loading: false,
       });
     } else {
       UserApiService.getUserDashboard(user_id).then((response) => {
@@ -53,13 +55,18 @@ export default class Dashboard extends React.Component {
           iata: response.data[5],
           currentDate: convertDate(response.data[6]),
           futureDate: convertDate(response.data[7]),
+          loading: false,
         });
       });
     }
   }
 
   render() {
-    return (
+    return this.state.loading ? (
+      <div className="dashboard-main">
+        <h1>Loading...</h1>
+      </div>
+    ) : (
       <div className="dashboard-main">
         {/* <h3>{this.state.location}</h3> */}
         {this.state.currentWeather && (

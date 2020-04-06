@@ -22,7 +22,6 @@
 
   a:visited {
     color: #195faa;
-    /* color: white; */
   }
 
   ul {
@@ -37,9 +36,7 @@
     height: 50px;
     display: flex;
     background-color: #195faa;
-    /* margin: 15px 0 10px 0; */
-    padding-left: 20px;
-    /* display: flex; */
+    padding-left: 10px;
   }
 
   #nav-left,
@@ -63,7 +60,12 @@
   }
 
   .fa-taxi {
-    margin-right: 2px;
+    margin-right: 5px;
+    font-size: 22px;
+  }
+
+  .app-name {
+    font-size: 22px;
   }
 
   svg {
@@ -73,7 +75,6 @@
   #nav-right {
     align-items: center;
     justify-content: space-evenly;
-    /* padding-right: 20px; */
   }
 
   #nav-right-logout {
@@ -83,6 +84,29 @@
 
   #nav-right-logout a {
     margin: 0 5px 0 5px;
+  }
+
+  main {
+    margin-top: 20%;
+  }
+
+  .section-one {
+    height: 75vh;
+    margin-bottom: 10%;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .login-main {
@@ -178,34 +202,11 @@
     font-family: "Baloo", cursive;
   }
 
-  .main-section:nth-child(odd) {
-    margin-bottom: 10px;
-    background-color: #ddd;
-  }
-
-  .main-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    text-align: center;
-    background-color: #aaa;
-  }
-
-  button {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .dashboard-main {
     margin-top: 20%;
     margin-bottom: 100px;
     padding: 1px 0 15px 0;
     border-radius: 10px;
-    /* border-top-right-radius: 10px;
-    border-top-left-radius: 10px; */
     background-color: rgb(240, 240, 240);
   }
 
@@ -220,12 +221,6 @@
     background-color: white;
   }
 
-  /* .svg-inline--fa.fa-w-14,
-  .svg-inline--fa.fa-w-16,
-  .svg-inline--fa.fa-w-20 {
-    width: 2em;
-  }
- */
   .weather-container {
     text-align: center;
   }
@@ -289,7 +284,6 @@
 
   .dashboard-header-events h4 {
     margin-right: 10px;
-    /* flex: 2; */
   }
 
   .chev-rotate-true {
@@ -360,19 +354,14 @@
   }
 
   footer {
-    /* margin: 10% 0 0 0; */
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: 90px;
-    /* margin-bottom: 0px; */
     padding: 10px 10px 15px 10px;
     text-align: center;
     background-color: #195faa;
-    /* background-color: rgb(240, 240, 240); */
-    /* border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px; */
   }
 
   footer a {
@@ -388,7 +377,6 @@
   }
 
   .footer-cr {
-    /* padding-top: 10px; */
     font-size: 0.75em;
     color: white;
   }

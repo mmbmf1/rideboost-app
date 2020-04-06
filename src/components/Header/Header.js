@@ -42,7 +42,7 @@ export default class Header extends React.Component {
         <div id="nav-left">
           <Link to="/">
             <FontAwesomeIcon icon={faTaxi} />
-            {content.title}
+            <span className="app-name">{content.title}</span>
           </Link>
         </div>
         {this.context.loggedIn
