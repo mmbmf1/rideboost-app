@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- The name of your app at the top of the file -->
 
-## Available Scripts
+# Ride Boost
 
-In the project directory, you can run:
+<!-- A link to your live app -->
 
-### `npm start`
+## Live Page:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://rideboost.now.sh/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## API Repo
 
-### `npm test`
+https://github.com/mmbmf1/rideboost-api/
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- A summary section. This should have a concise explanation of what your app does. Try to frame this from the standpoint of what the user does, or what the app enables for the user. -->
 
-### `npm run build`
+## Summary:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ride Boost a ride share driver companion app. The app gives drivers access to real-time weather data, arriving & departing flight information and local events near the driver.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<!-- A section on the technology used. For your capstone, this is fairly simple (HTML/CSS/JavaScript/jQuery) but it's still good to list out the key technologies -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used:
 
-### `npm run eject`
+- PostgreSQL
+- React.js
+- Express.js
+- Node.js
+- CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- Screenshot(s) of your app. This makes your app description much easier to understand. -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Landing Page:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![](images/Landing_page_1.jpg)
+![](images/Landing_Page_2.jpg)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Backpacks Page:
 
-## Learn More
+![](images/BP_collection.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Add Backpacks Page:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](images/BP_Add.jpg)
 
-### Code Splitting
+## Edit Backpacks Page:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![](images/BP_Edit.jpg)

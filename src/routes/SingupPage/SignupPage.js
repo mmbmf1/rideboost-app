@@ -1,6 +1,5 @@
 import React from "react";
 import SignupForm from "../../components/SignupForm/SignupForm";
-// import { Link } from "react-router-dom";
 
 export default class SignupPage extends React.Component {
   static defaultProps = {

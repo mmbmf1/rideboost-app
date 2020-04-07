@@ -2,7 +2,6 @@ import React from "react";
 import ValidatioError from "../../utils/ValidationError";
 import RideBoostContext from "../../contexts/RideBoostContext";
 import AuthApiService from "../../services/auth-api-service";
-// import AirportOptions from "./AirportOptions/AirportOptions";
 
 export default class SignupForm extends React.Component {
   static contextType = RideBoostContext;

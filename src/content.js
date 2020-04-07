@@ -1,10 +1,10 @@
 const content = {
   title: "Ride Boost",
-  hero: "Rideshare Driver Assistant",
+  hero: "Driver Copilot",
   heroContent: "Locate riders. Increase your rides. Earn more money",
   sectionOneTitle: "Real Time Weather",
   sectionOneContent:
-    "Get real time weather data the extended forecast for you area.",
+    "Get real time weather data and the extended forecast for you area.",
   sectionTwoTitle: "Real Time Flight Data",
   sectionTwoContent:
     "See which flights are arriving and departing so you know when to be at the airport.",

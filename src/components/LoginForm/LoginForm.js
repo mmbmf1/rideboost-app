@@ -65,7 +65,6 @@ export default class LoginForm extends React.Component {
           type={this.state.hidden ? "password" : "text"}
           name="password"
           placeholder="Password"
-          autoComplete="new-password"
         />
         <div className="show-container">
           <input type="checkbox" onChange={this.toggleShow} />
