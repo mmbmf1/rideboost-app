@@ -1,33 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo|Baloo+Chettan+2|Montserrat&display=swap");
-
 @media screen and (min-width: 300px) {
   * {
     box-sizing: border-box;
   }
-
   body {
     margin: 5px;
     font-family: "Montserrat", sans-serif;
   }
-
   ::-webkit-scrollbar {
     display: none;
   }
-
   a {
     color: #195faa;
-
     text-decoration: #195faa;
   }
-
   a:visited {
     color: #195faa;
   }
-
   ul {
     list-style: none;
   }
-
   nav {
     position: fixed;
     top: 0;
@@ -39,7 +31,6 @@
     padding-left: 10px;
     z-index: 1;
   }
-
   #nav-left,
   #nav-right,
   #nav-right-logout {
@@ -49,107 +40,87 @@
     align-items: center;
     font-family: "Baloo", cursive;
   }
-
   #nav-left a,
   #nav-right a,
   #nav-right-logout a {
     color: white;
   }
-
   i {
     margin-right: 5px;
   }
-
   .fa-taxi {
     margin-right: 5px;
     font-size: 22px;
   }
-
   .app-name {
     font-size: 22px;
   }
-
   svg {
     margin-right: 10px;
   }
-
   #nav-right {
     align-items: center;
     justify-content: space-evenly;
     font-size: smaller;
   }
-
   #nav-right-logout {
     justify-content: flex-end;
     padding-right: 20px;
     font-size: smaller;
   }
-
   #nav-right-logout a {
     margin: 0 5px 0 5px;
   }
-
   main {
     margin-top: 20%;
   }
-
   .section-one {
     height: 75vh;
     margin-bottom: 10%;
   }
-
   .section-one h1 {
     margin: 0;
     font-size: 2.4em;
     font-family: "Baloo", cursive;
     color: #ff4e40;
   }
-
   .hero-container {
     display: flex;
   }
-
   .hero-icon-container {
     margin-left: 20px;
     align-self: center;
   }
-
   .hero-icon {
     font-size: 7em;
     margin-left: auto;
     margin-right: auto;
     color: #195faa;
   }
-
   .hero-text-container {
     margin: 40px 0 40px 20px;
   }
-
   .section-one h3 {
     margin-top: 0;
     margin-bottom: 5px;
     font-size: small;
     color: #195faa;
   }
-
   .section-one div {
     padding-bottom: 15px;
     text-align: left;
     font-size: small;
   }
-
   .section-two,
   .section-three {
     border-bottom: 1px solid lightgrey;
   }
-
   .section-two h1,
   .section-three h1,
   .section-four h1 {
     padding: 0 40px;
     color: #195faa;
   }
-
   .main-section {
     display: flex;
     flex-direction: column;
@@ -159,7 +130,6 @@
     padding: 10px;
     text-align: center;
   }
-
   .fa-calendar-week,
   .fa-plane,
   .fa-cloud-sun-rain {
@@ -167,24 +137,19 @@
     margin-left: auto;
     font-size: 60px;
   }
-
   .fa-cloud-sun-rain {
     color: #ff4e40;
   }
-
   .fa-plane {
     color: #268fff;
   }
-
   .fa-calendar-week {
     color: #9eb312;
   }
-
   .main-section p {
     margin-top: 0;
     padding: 0 40px 60px 40px;
   }
-
   button {
     position: relative;
     display: inline-block;
@@ -199,12 +164,10 @@
     margin-left: auto;
     margin-right: auto;
   }
-
   button.btn {
     width: 12rem;
     height: auto;
   }
-
   button.btn .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
@@ -268,26 +231,21 @@
   button:hover .button-text {
     color: #fff;
   }
-
   .login-main {
     margin-top: 35%;
   }
-
   .signup-main {
     margin: 20% 0;
   }
-
   form {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
   }
-
   input:-webkit-autofill {
     box-shadow: 0 0 0 30px white inset;
     -webkit-box-shadow: 0 0 0 30px white inset !important;
   }
-
   input[type="email"],
   input[type="password"],
   input[type="text"] {
@@ -299,17 +257,14 @@
     border-right: none;
     border-left: none;
   }
-
   input:focus {
     outline: none;
     box-shadow: 0 0 5px #195faa;
   }
-
   input[type="email"],
   input[type="text"] {
     margin-bottom: 15px;
   }
-
   input[type="submit"] {
     width: 50%;
     height: 2.5rem;
@@ -322,37 +277,31 @@
     font-weight: bold;
     letter-spacing: unset;
   }
-
   .form-header {
     padding-bottom: 20px;
     font-size: 0.8em;
     color: red;
   }
-
   .show-container {
     display: flex;
     align-items: center;
     font-size: 0.7em;
     margin-bottom: 30px;
   }
-
   input[type="checkbox"] {
     width: unset;
     margin: 10px 5px 10px 0;
   }
-
   .signup-link {
     margin: 30px 0;
     text-align: center;
     font-size: 0.8em;
   }
-
   .bold-link {
     display: block;
     font-weight: bolder;
     margin: 10px;
   }
-
   .dashboard-main {
     margin-top: 20%;
     margin-bottom: 100px;
@@ -363,7 +312,6 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
-
   @keyframes fadeInAnimation {
     0% {
       opacity: 0;
@@ -372,7 +320,6 @@
       opacity: 1;
     }
   }
-
   .loader {
     margin-top: 50%;
     margin-left: auto;
@@ -385,12 +332,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
   }
-
   .load-container p {
     text-align: center;
   }
-
-  /* Safari */
   @-webkit-keyframes spin {
     0% {
       -webkit-transform: rotate(0deg);
@@ -399,7 +343,6 @@
       -webkit-transform: rotate(360deg);
     }
   }
-
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -408,7 +351,6 @@
       transform: rotate(360deg);
     }
   }
-
   .weather-container,
   .arrival-container,
   .departure-container,
@@ -419,34 +361,27 @@
     box-shadow: 0 0 5px #195faa;
     background-color: white;
   }
-
   .weather-container {
     text-align: center;
   }
-
   .weather-container ul {
     display: flex;
     justify-content: space-evenly;
     padding: 0;
   }
-
   ul {
     margin: 0;
   }
-
   li img {
     width: 50px;
   }
-
   li p {
     font-size: 0.5em;
   }
-
   .temp-display {
     font-size: 0.9em;
     font-weight: bolder;
   }
-
   .dashboard-header {
     display: flex;
     align-items: center;
@@ -454,16 +389,13 @@
     margin-bottom: 10px;
     border-bottom: 1px solid lightgrey;
   }
-
   .fa-plane-arrival,
   .fa-plane-departure {
     color: #268fff;
   }
-
   .fa-calendar-alt {
     color: #9eb312;
   }
-
   .dashboard-header-events {
     display: flex;
     align-items: center;
@@ -471,102 +403,81 @@
     margin-bottom: 10px;
     border-bottom: 1px solid lightgrey;
   }
-
   .dashboard-header-events .fa-w-20 {
     flex: 1;
   }
-
   .dashboard-header p {
     font-size: 0.8em;
     flex: 8;
   }
-
   .dashboard-header-events p {
     font-size: 0.8em;
     flex: 8;
   }
-
   .dashboard-header h4 {
     margin-right: 10px;
   }
-
   .dashboard-header-events h4 {
     margin-right: 10px;
   }
-
   .chev-rotate-true {
     transform: rotate(180deg);
   }
-
   .flight-count {
     font-size: 0.7em;
   }
-
   .table-display-false,
   .events-display-false {
     display: none;
   }
-
   .airline-container h4 {
     margin-top: 0;
     margin-bottom: 0;
   }
-
   table {
     table-layout: fixed;
     width: 100%;
     font-size: 0.5em;
   }
-
   th {
     background-color: rgb(39, 143, 255, 0.2);
     border-bottom: 1px solid lightgrey;
   }
-
   th,
   td {
     text-align: left;
   }
-
   td {
     padding-right: 10px;
   }
-
   .flight-count {
     font-size: 0.7em;
   }
-
   .svg-inline--fa.calendar-header {
     width: 20px;
   }
-
   .event {
     clear: left;
     margin-bottom: 5px;
     border-bottom: 1px solid lightgray;
   }
-
   .event-img {
     float: left;
     margin-right: 10px;
     padding: 10px 0 10px 0;
   }
-
   .event-img img {
     width: 48px;
     height: 48px;
   }
-
   .stock-img {
     float: left;
     font-size: 55px;
   }
-
   .event-info {
     padding: 10px 0 20px 0;
     font-size: 0.5em;
   }
-
   footer {
     position: fixed;
     bottom: 0;
@@ -576,64 +487,52 @@
     background-color: #195faa;
   }
 }
-
 @media screen and (min-width: 768px) {
   #nav-right {
     justify-content: flex-end;
   }
-
   #nav-right a {
     padding: 0 20px;
   }
-
   .hero-container {
     margin-left: auto;
     margin-right: auto;
   }
-
   .hero-text-container {
     max-width: 250px;
   }
-
   .section-two,
   .section-three,
   .section-four {
     padding: 0 160px;
   }
-
   .login-main {
     width: 600px;
     margin-top: 25%;
     margin-left: auto;
     margin-right: auto;
   }
-
   .signup-main {
     width: 600px;
     margin-top: 25%;
     margin-left: auto;
     margin-right: auto;
   }
-
   .dashboard-main {
     width: 600px;
     margin-top: 10%;
     margin-right: auto;
     margin-left: auto;
   }
-
   li img {
     width: unset;
   }
-
   li p {
     font-size: 1em;
   }
-
   .dashboard-header p {
     font-size: 1em;
   }
-
   .fa-plane-arrival,
   .fa-plane-departure,
   .svg-inline--fa.calendar-header {
@@ -641,72 +540,57 @@
     width: 48px;
     height: 48px;
   }
-
   table {
     font-size: 1em;
   }
-
   th,
   td {
     padding-bottom: 10px;
   }
-
   .event-info a,
   .event-info p {
     font-size: 1.5em;
   }
-
   .loader {
     margin-top: 25%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main {
     margin-top: 10%;
   }
-
   .section-one {
     margin-bottom: 180px;
   }
-
   .hero-icon {
     margin-left: 120px;
     margin-right: 20px;
     font-size: 10em;
   }
-
   .hero-text-container {
     max-width: 400px;
   }
-
   .hero-text-container h1 {
     font-size: 4em;
   }
-
   .hero-text-container h3,
   .hero-text-container div {
     font-size: 1.5em;
   }
-
   .section-two,
   .section-three,
   .section-four {
     padding: 0 340px;
   }
-
   .login-main {
     margin-top: 15%;
   }
-
   .signup-main {
     margin-top: 15%;
   }
-
   .dashboard-main {
     min-width: 800px;
   }
-
   .loader {
     margin-top: 20%;
   }
