@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    margin: 5px;
+    margin: 0;
     font-family: "Montserrat", sans-serif;
   }
   ::-webkit-scrollbar {
@@ -71,12 +71,25 @@
   #nav-right-logout a {
     margin: 0 5px 0 5px;
   }
-  main {
-    margin-top: 20%;
-  }
   .section-one {
-    height: 75vh;
+    height: 100vh;
+    background: #bfdeff;
+    background: -webkit-linear-gradient(to right, #f0f6fc, #bfdeff, #d3e4f7);
+    background: linear-gradient(to right, #f0f6fc, #bfdeff, #d3e4f7);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     margin-bottom: 10%;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: 0%;
+    }
   }
   .section-one h1 {
     margin: 0;
@@ -99,6 +112,9 @@
   }
   .hero-text-container {
     margin: 40px 0 40px 20px;
+  }
+  .hero-text-container h1 {
+    letter-spacing: 2.5px;
   }
   .section-one h3 {
     margin-top: 0;
@@ -222,6 +238,7 @@
   }
   button:hover .circle {
     width: 100%;
+    background-color: #ff4e40;
   }
   button:hover .circle .icon.arrow {
     background: #fff;
@@ -265,17 +282,33 @@
   input[type="text"] {
     margin-bottom: 15px;
   }
+  .button-container {
+    margin: 0 auto;
+  }
   input[type="submit"] {
-    width: 50%;
-    height: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #fff;
     border: none;
-    background-color: #195faa;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 1em 3em;
+    background-size: 300% 300%;
     color: white;
-    font-weight: bold;
-    letter-spacing: unset;
+    background-image: linear-gradient(
+      to right,
+      #195faa 0%,
+      #4592e4 50%,
+      #195faa 100%
+    );
+    transition: 0.5s;
+  }
+  input:hover {
+    background-position: right center;
   }
   .form-header {
     padding-bottom: 20px;
@@ -302,12 +335,15 @@
     font-weight: bolder;
     margin: 10px;
   }
+
+  .bold-link a:hover {
+    color: #ff4e40;
+    border-bottom: 1px solid #ff4e40;
+  }
   .dashboard-main {
-    margin-top: 20%;
-    margin-bottom: 100px;
+    margin-top: 15%;
+    margin-bottom: 60px;
     padding: 1px 0 15px 0;
-    border-radius: 10px;
-    background-color: rgb(240, 240, 240);
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -319,6 +355,15 @@
     100% {
       opacity: 1;
     }
+  }
+  .dashboard-main h1 {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    font-family: "Baloo", cursive;
+    font-weight: 100;
+    color: #0c2d51;
+    border-bottom: 1px solid lightgrey;
   }
   .loader {
     margin-top: 50%;
@@ -355,10 +400,7 @@
   .arrival-container,
   .departure-container,
   .events-container {
-    margin: 15px 10px 0 10px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #195faa;
+    padding: 10px 30px;
     background-color: white;
   }
   .weather-container {
@@ -520,7 +562,7 @@
   }
   .dashboard-main {
     width: 600px;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -556,8 +598,11 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  main {
-    margin-top: 10%;
+  #nav-left a:hover {
+    color: #ff4e40;
+  }
+  #nav-right a:hover {
+    color: #ff4e40;
   }
   .section-one {
     margin-bottom: 180px;
@@ -571,6 +616,7 @@
     max-width: 400px;
   }
   .hero-text-container h1 {
+    letter-spacing: 10px;
     font-size: 4em;
   }
   .hero-text-container h3,
@@ -586,7 +632,7 @@
     margin-top: 15%;
   }
   .signup-main {
-    margin-top: 15%;
+    margin-top: 10%;
   }
   .dashboard-main {
     min-width: 800px;

@@ -68,6 +68,7 @@ export default class Dashboard extends React.Component {
       </div>
     ) : (
       <div className="dashboard-main">
+        <h1>{this.state.location}</h1>
         {this.state.currentWeather && (
           <Weather
             currentWeather={this.state.currentWeather}

@@ -70,7 +70,9 @@ export default class LoginForm extends React.Component {
           <input type="checkbox" onChange={this.toggleShow} />
           <label>Show Password</label>
         </div>
-        <input className="button" type="submit" value="Login" />
+        <div className="button-container">
+          <input className="button" type="submit" value="Login" />
+        </div>
       </form>
     );
   }

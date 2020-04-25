@@ -1,5 +1,5 @@
 import React from "react";
-import ValidatioError from "../../utils/ValidationError";
+import ValidationError from "../../utils/ValidationError";
 import RideBoostContext from "../../contexts/RideBoostContext";
 import AuthApiService from "../../services/auth-api-service";
 
@@ -66,7 +66,7 @@ export default class SignupForm extends React.Component {
         className="registration-form"
         onSubmit={(e) => this.handleSubmit(e)}
       >
-        <ValidatioError message={error} />
+        <ValidationError message={error} />
         <label htmlFor="first_name"></label>
         <input type="text" name="first_name" placeholder="First Name" />
         <label htmlFor="last_name"></label>
@@ -108,7 +108,9 @@ export default class SignupForm extends React.Component {
           <input type="checkbox" onChange={this.toggleShow} />
           <label>Show Password</label>
         </div>
-        <input type="submit" value="Create Account" />
+        <div className="button-container">
+          <input type="submit" value="Create Account" />
+        </div>
       </form>
     );
   }
