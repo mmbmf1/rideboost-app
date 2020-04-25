@@ -1,5 +1,6 @@
 import React from "react";
 import RideBoostContext from "../../contexts/RideBoostContext";
+import FadeInSection from "./FadeInSection/FadeInSection";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -37,21 +38,27 @@ export default class LandingPage extends React.Component {
               </Link>
             </button>
           </section>
-          <section className="section-two main-section">
-            <FontAwesomeIcon icon={faCloudSunRain} />
-            <h1>{content.sectionOneTitle}</h1>
-            <p>{content.sectionOneContent}</p>
-          </section>
-          <section className="section-three main-section">
-            <FontAwesomeIcon icon={faPlane} />
-            <h1>{content.sectionTwoTitle}</h1>
-            <p>{content.sectionTwoContent}</p>
-          </section>
-          <section className="section-four main-section">
-            <FontAwesomeIcon icon={faCalendarWeek} />
-            <h1>{content.sectionThreeTitle}</h1>
-            <p>{content.sectionThreeContent}</p>
-          </section>
+          <FadeInSection>
+            <section className="section-two main-section">
+              <FontAwesomeIcon icon={faCloudSunRain} />
+              <h1>{content.sectionOneTitle}</h1>
+              <p>{content.sectionOneContent}</p>
+            </section>
+          </FadeInSection>
+          <FadeInSection>
+            <section className="section-three main-section">
+              <FontAwesomeIcon icon={faPlane} />
+              <h1>{content.sectionTwoTitle}</h1>
+              <p>{content.sectionTwoContent}</p>
+            </section>
+          </FadeInSection>
+          <FadeInSection>
+            <section className="section-four main-section">
+              <FontAwesomeIcon icon={faCalendarWeek} />
+              <h1>{content.sectionThreeTitle}</h1>
+              <p>{content.sectionThreeContent}</p>
+            </section>
+          </FadeInSection>
         </div>
       </main>
     );

@@ -127,6 +127,18 @@
     text-align: left;
     font-size: small;
   }
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(15vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1s ease-out;
+    will-change: opacity, visibility;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
   .section-two,
   .section-three {
     border-bottom: 1px solid lightgrey;
@@ -546,7 +558,7 @@
   .section-two,
   .section-three,
   .section-four {
-    padding: 0 160px;
+    /* padding: 0 160px; */
   }
   .login-main {
     width: 600px;
@@ -622,11 +634,6 @@
   .hero-text-container h3,
   .hero-text-container div {
     font-size: 1.5em;
-  }
-  .section-two,
-  .section-three,
-  .section-four {
-    padding: 0 340px;
   }
   .login-main {
     margin-top: 15%;
