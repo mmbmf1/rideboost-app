@@ -647,4 +647,8 @@
   .loader {
     margin-top: 20%;
   }
+
+  .fa-chevron-down:hover {
+    cursor: pointer;
+  }
 }
