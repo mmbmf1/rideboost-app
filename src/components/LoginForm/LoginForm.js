@@ -53,7 +53,7 @@ export default class LoginForm extends React.Component {
           <ValidationError
             message={
               !this.state.error
-                ? "Login in to access you dashboard"
+                ? "Login in to access your dashboard"
                 : this.state.error
             }
           />
