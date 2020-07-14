@@ -1,47 +1,47 @@
-import React from "react";
-import RideBoostContext from "../../contexts/RideBoostContext";
-import ValidationError from "../../utils/ValidationError";
-import TokenService from "../../services/token-service";
-import AuthApiService from "../../services/auth-api-service";
+import React from 'react'
+import RideBoostContext from '../../contexts/RideBoostContext'
+import ValidationError from '../../utils/ValidationError'
+import TokenService from '../../services/token-service'
+import AuthApiService from '../../services/auth-api-service'
 
 export default class LoginForm extends React.Component {
-  static contextType = RideBoostContext;
+  static contextType = RideBoostContext
 
   constructor() {
-    super();
+    super()
     this.state = {
       error: null,
       hidden: true,
-    };
+    }
   }
 
   toggleShow = () => {
     this.setState((prevState) => ({
       hidden: !prevState.hidden,
-    }));
-  };
+    }))
+  }
 
   handleSubmitJwtAuth = (e) => {
-    e.preventDefault();
-    this.setState({ error: null });
-    const { user_email, password } = e.target;
+    e.preventDefault()
+    this.setState({ error: null })
+    const { user_email, password } = e.target
 
     AuthApiService.postLogin({
       user_email: user_email.value,
       password: password.value,
     })
       .then((res) => {
-        user_email.value = "";
-        password.value = "";
-        TokenService.saveAuthToken(res.authToken);
-        TokenService.saveUserId(res.payload.user_id);
-        this.context.setLoggedIn(true);
-        this.props.onLoginSuccess();
+        user_email.value = ''
+        password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        TokenService.saveUserId(res.payload.user_id)
+        this.context.setLoggedIn(true)
+        this.props.onLoginSuccess()
       })
       .catch((res) => {
-        this.setState({ error: res.error });
-      });
-  };
+        this.setState({ error: res.error })
+      })
+  }
 
   render() {
     return (
@@ -53,7 +53,7 @@ export default class LoginForm extends React.Component {
           <ValidationError
             message={
               !this.state.error
-                ? "Login in to access your dashboard"
+                ? 'Login in to access your dashboard'
                 : this.state.error
             }
           />
@@ -62,7 +62,7 @@ export default class LoginForm extends React.Component {
         <input type="email" name="user_email" placeholder="Email" />
         <label htmlFor="password"></label>
         <input
-          type={this.state.hidden ? "password" : "text"}
+          type={this.state.hidden ? 'password' : 'text'}
           name="password"
           placeholder="Password"
         />
@@ -74,6 +74,6 @@ export default class LoginForm extends React.Component {
           <input className="button" type="submit" value="Login" />
         </div>
       </form>
-    );
+    )
   }
 }
